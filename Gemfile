@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'mysql2'
+gem 'devise'
+gem 'inherited_resources'
 
 group :assets do
   gem 'sass-rails', '~> 3.1.4'
@@ -12,6 +14,7 @@ end
 group :development do
   gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'growl_notify'
 end
 
 group :test, :development do
