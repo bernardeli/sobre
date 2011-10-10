@@ -11,6 +11,7 @@ group :assets do
 end
 
 group :development do
+  gem 'inploy'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'growl_notify'
