@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'devise'
 gem 'inherited_resources'
+gem 'therubyracer'
 
 group :assets do
   gem 'sass-rails', '~> 3.1.4'
@@ -11,7 +12,7 @@ group :assets do
 end
 
 group :development do
-  gem 'inploy'
+  gem 'capistrano'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'growl_notify'
