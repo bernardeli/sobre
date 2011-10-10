@@ -1,5 +1,5 @@
 application = "sobre"
-repository = 'git://github.com:bernardelli/sobre.git'
+repository = 'git@github.com:bernardelli/sobre.git'
 hosts = %w('cpro5216.publiccloud.com.br')
 
 # OPTIONALS
