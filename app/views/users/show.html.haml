@@ -1,4 +1,11 @@
 - if resource
   %p= resource.username
+  %p= resource.information.title
+  %p= resource.information.subtitle
+  %p= resource.information.description
+  %p= resource.information.twitter
+  %p= resource.information.facebook
+  %p= resource.information.orkut
+  %p= resource.information.linkedin
 - else
   %p Not found
