@@ -1,7 +1,7 @@
 Sobre::Application.routes.draw do
   devise_for :users
-  get "welcome/index"
-  get "dashboard/index"
+  resources :welcome, :only => :index
+  resources :dashboard, :only => :index
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
