@@ -6,10 +6,7 @@ gem 'inherited_resources'
 gem 'therubyracer'
 gem 'jquery-rails', '>= 1.0.12'
 gem 'haml'
-
-group :production do
-  gem 'mysql2'
-end
+gem 'mysql2'
 
 group :assets do
   gem 'sass-rails', '~> 3.1.4'
@@ -17,7 +14,6 @@ group :assets do
 end
 
 group :development do
-  gem 'sqlite3'
   gem 'capistrano'
   gem 'guard-rspec'
   gem 'guard-spork'
@@ -31,5 +27,6 @@ end
 group :test do
   gem 'rspec-rails', '~> 2.6'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
   gem 'capybara'
 end
