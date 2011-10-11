@@ -28,4 +28,4 @@ production:
   database: sobre_production
   pool: 5
   username: root
-  password: saasdev2020
+  password:
