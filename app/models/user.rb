@@ -9,4 +9,14 @@ class User < ActiveRecord::Base
 
   validates_uniqueness_of :username, :allow_nil => true
   validates_format_of :username, :with => /^[a-zA-Z0-9_]*$/i
+
+  has_one :information
+
+  after_create :add_new_information_for_user
+
+  private
+
+  def add_new_information_for_user
+    create_information
+  end
 end

@@ -2,3 +2,11 @@
 
 = link_to 'Edit user', edit_user_registration_path
 = link_to 'Logout', destroy_user_session_path, :method => :delete
+
+%p= current_user.information.title
+%p= current_user.information.subtitle
+%p= current_user.information.description
+%p= current_user.information.twitter
+%p= current_user.information.facebook
+%p= current_user.information.linkedin
+%p= current_user.information.orkut

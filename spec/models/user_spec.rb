@@ -4,6 +4,7 @@ describe User do
   before(:each) { Factory(:user) }
 
   it { should validate_uniqueness_of :username }
+  it { should have_one :information }
 
   describe "validations" do
     context "when username is alphanumeric" do
@@ -20,6 +21,12 @@ describe User do
           Factory.build(:user, :username => username).should_not be_valid
         end
       end
+    end
+  end
+
+  describe "after_save" do
+    it "creates information association for user" do
+      Factory(:user).information.should_not be_nil
     end
   end
 end

@@ -18,12 +18,12 @@ set :default_environment, {
 }
 
 set :scm, :git
-set :repository,  "git@github.com:bernardelli/sobre.git"
+set :repository, "git@github.com:bernardelli/sobre.git"
 set :deploy_via, :remote_cache
 
 role :web, domain
 role :app, domain
-role :db,  domain, :primary => true
+role :db, domain, :primary => true
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
