@@ -5,6 +5,7 @@ gem 'mysql2'
 gem 'devise'
 gem 'inherited_resources'
 gem 'therubyracer'
+gem 'jquery-rails', '>= 1.0.12'
 
 group :assets do
   gem 'sass-rails', '~> 3.1.4'
