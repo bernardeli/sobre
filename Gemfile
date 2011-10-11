@@ -1,11 +1,15 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-gem 'mysql2'
 gem 'devise'
 gem 'inherited_resources'
 gem 'therubyracer'
 gem 'jquery-rails', '>= 1.0.12'
+gem 'haml'
+
+group :production do
+  gem 'mysql2'
+end
 
 group :assets do
   gem 'sass-rails', '~> 3.1.4'
@@ -13,6 +17,7 @@ group :assets do
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'capistrano'
   gem 'guard-rspec'
   gem 'guard-spork'
