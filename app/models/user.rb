@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :remember_me, :username, :name
 
   validates_uniqueness_of :username, :allow_nil => true
+  validates_format_of :username, :with => /^[a-zA-Z0-9_]*$/i
 end
