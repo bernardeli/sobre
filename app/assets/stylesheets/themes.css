@@ -1,4 +1,4 @@
 /*
  *= require_self
- *= require ./themes
+ *= require_tree ./themes
 */
