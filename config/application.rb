@@ -54,5 +54,9 @@ module Sobre
     config.generators do |g|
       g.test_framework :rspec
     end
+
+    config.to_prepare do
+      Devise::SessionsController.layout "application"
+    end
   end
 end
