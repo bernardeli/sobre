@@ -1,12 +1,18 @@
 require 'spec_helper'
 
 describe User do
-  before(:each) { Factory(:user) }
+  before(:each) { @user = Factory(:user) }
 
   it { should validate_uniqueness_of :username }
   it { should have_one :information }
 
   describe "validations" do
+    it "validates presence of on update" do
+      @user.username = ''
+      @user.valid?.should be_false
+      @user.errors.get(:username).should_not be_empty
+    end
+
     context "when username is alphanumeric" do
       %w( test te_st 1test test2test ).each do |username|
         it "is valid" do

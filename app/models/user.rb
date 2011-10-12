@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :remember_me, :username, :name
 
-  validates_uniqueness_of :username, :allow_nil => true
+  validates_presence_of :username, :on => :update
+  validates_uniqueness_of :username
   validates_format_of :username, :with => /^[a-zA-Z0-9_]*$/i
 
   has_one :information
