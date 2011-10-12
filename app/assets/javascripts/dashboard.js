@@ -14,6 +14,9 @@ $().ready(function(){
   setInterval(function() { $(".title").html($('form.edit_information #information_title').val()) }, 1000);
   setInterval(function() { $(".subtitle").html($('form.edit_information #information_subtitle').val()) }, 1000);
   setInterval(function() { $(".description").html($('form.edit_information #information_description').val()) }, 1000);
+  setInterval(function() { $(".phone").html($('form.edit_information #information_phone').val()) }, 1000);
+  setInterval(function() { $(".address").html($('form.edit_information #information_address').val()) }, 1000);
+  setInterval(function() { $(".email").html($('form.edit_information #information_email').val()) }, 1000);
   setInterval(function() { sobre.interval("twitter") }, 1000);
   setInterval(function() { sobre.interval("facebook") }, 1000);
   setInterval(function() { sobre.interval("linkedin") }, 1000);

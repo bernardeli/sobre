@@ -13,11 +13,15 @@
 
   %address
     .align-center
-      %p#email Email: email@email.com
-      %p#phone
-        Telefone
-        %tel (11) 0000-0000
-      %p Endereço: Rua xxxxxx, 340 - Barrio - Sao paulo
+      %p
+        Email:
+        = mail_to(resource.information.email, nil, :class => 'email')
+      %p
+        Telefone:
+        %tel.phone= resource.information.phone
+      %p
+        Endereço:
+        %span.address= resource.information.address
 
   %aside.social-network
     .align-center
