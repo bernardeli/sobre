@@ -25,10 +25,10 @@
 
   %aside.social-network
     .align-center
-      = link_to 'LinkedIn', resource.information.linkedin, :class => 'linkedin', :style => resource.information.linkedin? ? '' : 'display:none'
-      = link_to 'Orkut', resource.information.orkut, :class => 'orkut', :style => resource.information.orkut? ? '' : 'display:none'
-      = link_to 'Facebook', resource.information.facebook, :class => 'facebook', :style => resource.information.facebook? ? '' : 'display:none'
-      = link_to 'Twitter', resource.information.twitter, :class => 'twitter', :style => resource.information.twitter? ? '' : 'display:none'
+      = social_network_to(:linkedin, resource.information.linkedin)
+      = social_network_to(:orkut, resource.information.orkut)
+      = social_network_to(:facebook, resource.information.facebook)
+      = social_network_to(:twitter, resource.information.twitter)
 
 - content_for :title do
   = resource.information.title

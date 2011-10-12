@@ -17,20 +17,21 @@ $().ready(function(){
   setInterval(function() { $(".phone").html($('form.edit_information #information_phone').val()) }, 1000);
   setInterval(function() { $(".address").html($('form.edit_information #information_address').val()) }, 1000);
   setInterval(function() { $(".email").html($('form.edit_information #information_email').val()) }, 1000);
-  setInterval(function() { sobre.interval("twitter") }, 1000);
-  setInterval(function() { sobre.interval("facebook") }, 1000);
-  setInterval(function() { sobre.interval("linkedin") }, 1000);
-  setInterval(function() { sobre.interval("orkut") }, 1000);
+  setInterval(function() { sobre.interval("twitter", "http://twitter.com/") }, 1000);
+  setInterval(function() { sobre.interval("facebook", "http://facebook.com/") }, 1000);
+  setInterval(function() { sobre.interval("linkedin", "http://linkedin.com/in/") }, 1000);
+  setInterval(function() { sobre.interval("orkut", "http://orkut.com/") }, 1000);
 });
 
 var sobre = sobre || {};
 
 sobre = {
-  interval: function(field) {
-    url = $("form.edit_information #information_" + field).val();
+  interval: function(field, urlBase) {
+    username = $("form.edit_information #information_" + field).val();
+    url = urlBase + username
     fieldId = "." + field;
     $(fieldId).attr("href", url);
-    if (url == "") {
+    if (username == "") {
       $(fieldId).hide();
     } else {
       $(fieldId).show();
