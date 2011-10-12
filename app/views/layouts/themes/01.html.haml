@@ -1,0 +1,16 @@
+!!! 5
+%html{:lang => "pt-br"}
+  %head
+    %meta{:charset => "UTF-8"}
+    = stylesheet_link_tag 'themes/01'
+    %title= yield :title
+
+  %body
+    .all-content
+      = yield
+
+    %footer
+      .align-center
+        %p Sob.re | Todos os direitos reservados
+      = javascript_include_tag 'dashboard'
+      = yield :footer
