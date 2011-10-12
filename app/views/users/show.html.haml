@@ -1,17 +1,4 @@
 - if resource
-  #title
-    = current_user.information.title
-  #subtitle
-    = current_user.information.subtitle
-  #description
-    = current_user.information.description
-  #twitter{:style => current_user.information.twitter.blank? ? 'display:none' : ''}
-    = link_to 'twitter', current_user.information.twitter, :target => :blank
-  #facebook{:style => current_user.information.facebook.blank? ? 'display:none' : ''}
-    = link_to 'facebook', current_user.information.facebook, :target => :blank
-  #linkedin{:style => current_user.information.linkedin.blank? ? 'display:none' : ''}
-    = link_to 'linkedin', current_user.information.linkedin, :target => :blank
-  #orkut{:style => current_user.information.orkut.blank? ? 'display:none' : ''}
-    = link_to 'orkut', current_user.information.orkut, :target => :blank
+  = render 'shared/user_information'
 - else
   %p Not found
