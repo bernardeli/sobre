@@ -1,14 +1,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require jquery.maskedinput
 //= require jquery.autosave
 
 $().ready(function(){
   $(".trigger-form").click(sobre.toggleInformationForm);
   $(".close-form").click(sobre.toggleInformationForm);
-
-  $(".close-form").click(function() {
-  });
 
   $('form.edit_information').autosave({
     interval: 3000,
@@ -20,6 +18,7 @@ $().ready(function(){
   });
 
   $("#information-form").draggable();
+  $("#information_phone").mask("(99) 9999-9999");
 
   setInterval(function() { $(".title").html($('form.edit_information #information_title').val()) }, 1000);
   setInterval(function() { $(".subtitle").html($('form.edit_information #information_subtitle').val()) }, 1000);
