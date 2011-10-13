@@ -112,6 +112,48 @@ section.faixa{
   text-align: right;
 }
 
+.menu{
+  background: url(<%= asset_path('fundo-menu.png') %>) repeat-x;
+  border-radius:10px;
+  float: right;
+  padding-left: 50px;
+  width: 415px;
+  li{
+    border-right: 1px solid #E6E6E7;
+    border-left: 1px solid #D7D7D8;
+    float: left;
+    height: 56px;
+    line-height: 56px;
+    position: relative;
+    span{
+      a{
+        color: #5E5B5B;
+        display: block;
+        font-size: 20px;
+        padding: 0 20px;
+        text-decoration: none;
+      }
+      a.last{
+        border-right: 1px solid #E6E6E7;
+      }
+    }
+    span.seta{display: none;}
+  }
+  li.selected{
+    background: url(<%= asset_path('li-selected.png') %>) repeat-x;
+    span.seta{
+      background: url(<%= asset_path('li-selected-seta.png') %>) no-repeat;
+      bottom: -9px;
+      display: block;
+      height: 9px;
+      left: 50%;
+      margin-left: -9px;
+      position: absolute;
+      width: 18px;
+    }
+  }
+}
+
 .video{
   background: url(<%= asset_path('fundo-video.png') %>) no-repeat;
   float: left;
@@ -154,7 +196,8 @@ section.faixa{
       box-shadow: 0 0 2px 0 rgba(57, 140, 255, 0.8) inset;
       color: #FFFFFF;
       float: right;
-      font: bold 12px "helvetica neue",helvetica,arial,sans-serif;
+      font-size: 18px;
+      margin-right: 3px;
       padding: 7px 0;
       text-shadow: 0 -1px 1px #1A5AD9;
       width: 150px;
@@ -174,9 +217,16 @@ section.faixa{
   clear: both;
   li{
     float: left;
-    font-size: 20px;
+    font-size: 18px;
     margin: 50px 50px 50px 0;
     width: 300px;
+    h4{
+      color: #B7002E;
+      font-size: 23px;
+    }
+    p{
+      color: #676767;
+    }
   }
 }
 
