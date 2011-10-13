@@ -66,4 +66,3 @@ end
 #after "deploy:update", "god:start"
 
 before "deploy:assets:precompile", "deploy:symlink_config"
-after "deploy:symlink_config", "deploy:migrate"
