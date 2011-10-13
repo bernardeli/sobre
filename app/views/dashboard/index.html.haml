@@ -1,41 +1,8 @@
 = link_to 'Edit user', edit_user_registration_path
 = link_to 'Logout', destroy_user_session_path, :method => :delete
 
-= form_for current_user.information, :method => :put do |f|
-  %p
-    = f.label :title
-    = f.text_field :title
-  %p
-    = f.label :subtitle
-    = f.text_field :subtitle
-  %p
-    = f.label :description
-    = f.text_field :description
-  %p
-    = f.label :twitter
-    = f.text_field :twitter
-  %p
-    = f.label :facebook
-    = f.text_field :facebook
-  %p
-    = f.label :linkedin
-    = f.text_field :linkedin
-  %p
-    = f.label :orkut
-    = f.text_field :orkut
-  %p
-    = f.label :address
-    = f.text_field :address
-  %p
-    = f.label :phone
-    = f.phone_field :phone
-  %p
-    = f.label :email
-    = f.email_field :email
-
-%p#save{:style => 'display:none'} Salvando...
+= render 'information_form'
 = render 'shared/user_information', :resource => current_user
-
 
 - content_for :footer do
   = javascript_include_tag 'dashboard'

@@ -1,0 +1,36 @@
+#information-form{:style => 'display:none'}
+  %p.save{:style => 'display:none'} Salvando...
+  = link_to "fechar", "#", :class => 'close-form'
+  = form_for current_user.information, :method => :put do |f|
+    %p
+      = f.label :title
+      = f.text_field :title
+    %p
+      = f.label :subtitle
+      = f.text_field :subtitle
+    %p
+      = f.label :description
+      = f.text_field :description
+    %p
+      = f.label :twitter
+      = f.text_field :twitter
+    %p
+      = f.label :facebook
+      = f.text_field :facebook
+    %p
+      = f.label :linkedin
+      = f.text_field :linkedin
+    %p
+      = f.label :orkut
+      = f.text_field :orkut
+    %p
+      = f.label :address
+      = f.text_field :address
+    %p
+      = f.label :phone
+      = f.phone_field :phone
+    %p
+      = f.label :email
+      = f.email_field :email
+
+= link_to "formulario", "#", :class => 'trigger-form'
