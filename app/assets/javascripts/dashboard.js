@@ -3,11 +3,18 @@
 //= require jquery.autosave
 
 $().ready(function(){
+  $(".trigger-form").click(sobre.toggleInformationForm);
+  $(".close-form").click(sobre.toggleInformationForm);
+
+  $(".close-form").click(function() {
+  });
+
   $('form.edit_information').autosave({
     interval: 3000,
     monitor: 3000,
     save: function(e, o) {
-      $("#save").show();
+      $(".save").show('slow');
+      setInterval(function() { $(".save").hide('slow') }, 2500);
     }
   });
 
@@ -37,4 +44,10 @@ sobre = {
       $(fieldId).show();
     }
   },
+
+  toggleInformationForm: function() {
+    $("#information-form").toggle("fast");
+    $(".trigger-form").toggle("fast");
+    return false;
+  }
 }
