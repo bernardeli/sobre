@@ -1,7 +1,7 @@
-#information-form{:style => 'display:none'}
+#page-form{:style => 'display:none'}
   %p.save{:style => 'display:none'} Salvando...
   = link_to "fechar", "#", :class => 'close-form'
-  = form_for current_user.information, :method => :put do |f|
+  = form_for current_user.page, :method => :put do |f|
     %p
       = f.label :title
       = f.text_field :title

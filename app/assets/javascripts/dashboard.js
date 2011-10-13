@@ -5,10 +5,10 @@
 //= require jquery.autosave
 
 $().ready(function(){
-  $(".trigger-form").click(sobre.toggleInformationForm);
-  $(".close-form").click(sobre.toggleInformationForm);
+  $(".trigger-form").click(sobre.togglePageForm);
+  $(".close-form").click(sobre.togglePageForm);
 
-  $('form.edit_information').autosave({
+  $('form.edit_page').autosave({
     interval: 3000,
     monitor: 3000,
     save: function(e, o) {
@@ -17,15 +17,15 @@ $().ready(function(){
     }
   });
 
-  $("#information-form").draggable();
-  $("#information_phone").mask("(99) 9999-9999");
+  $("#page-form").draggable();
+  $("#page_phone").mask("(99) 9999-9999");
 
-  setInterval(function() { $(".title").html($('form.edit_information #information_title').val()) }, 1000);
-  setInterval(function() { $(".subtitle").html($('form.edit_information #information_subtitle').val()) }, 1000);
-  setInterval(function() { $(".description").html($('form.edit_information #information_description').val()) }, 1000);
-  setInterval(function() { $(".phone").html($('form.edit_information #information_phone').val()) }, 1000);
-  setInterval(function() { $(".address").html($('form.edit_information #information_address').val()) }, 1000);
-  setInterval(function() { $(".email").html($('form.edit_information #information_email').val()) }, 1000);
+  setInterval(function() { $(".title").html($('form.edit_page #page_title').val()) }, 1000);
+  setInterval(function() { $(".subtitle").html($('form.edit_page #page_subtitle').val()) }, 1000);
+  setInterval(function() { $(".description").html($('form.edit_page #page_description').val()) }, 1000);
+  setInterval(function() { $(".phone").html($('form.edit_page #page_phone').val()) }, 1000);
+  setInterval(function() { $(".address").html($('form.edit_page #page_address').val()) }, 1000);
+  setInterval(function() { $(".email").html($('form.edit_page #page_email').val()) }, 1000);
   setInterval(function() { sobre.interval("twitter", "http://twitter.com/") }, 1000);
   setInterval(function() { sobre.interval("facebook", "http://facebook.com/") }, 1000);
   setInterval(function() { sobre.interval("linkedin", "http://linkedin.com/in/") }, 1000);
@@ -36,7 +36,7 @@ var sobre = sobre || {};
 
 sobre = {
   interval: function(field, urlBase) {
-    username = $("form.edit_information #information_" + field).val();
+    username = $("form.edit_page #page_" + field).val();
     url = urlBase + username
     fieldId = "." + field;
     $(fieldId).attr("href", url);
@@ -47,8 +47,8 @@ sobre = {
     }
   },
 
-  toggleInformationForm: function() {
-    $("#information-form").toggle("fast");
+  togglePageForm: function() {
+    $("#page-form").toggle("fast");
     $(".trigger-form").toggle("fast");
     return false;
   }

@@ -6,7 +6,7 @@ Sobre::Application.routes.draw do
   resources :welcome, :only => :index
   resources :dashboard, :only => :index
   resources :users, :only => :show
-  resources :informations, :only => :update
+  resources :pages, :only => :update
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

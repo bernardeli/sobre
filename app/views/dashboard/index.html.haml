@@ -2,8 +2,8 @@
 = link_to 'Sair', destroy_user_session_path, :method => :delete
 = link_to 'Editar página', "#", :class => 'trigger-form'
 
-= render 'information_form'
-= render 'shared/user_information', :resource => current_user
+= render 'page_form'
+= render 'shared/user_page', :resource => current_user
 
 - content_for :footer do
   = javascript_include_tag 'dashboard'

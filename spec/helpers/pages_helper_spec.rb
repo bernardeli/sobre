@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe InformationsHelper do
+describe PagesHelper do
   describe "#social_network_to" do
     %w( twitter facebook linkedin orkut ).each do |network|
       context "when is #{network.to_s}" do

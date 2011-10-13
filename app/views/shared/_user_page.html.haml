@@ -1,0 +1,34 @@
+%header
+  .align-center
+    %h2.title= resource.page.title
+
+%section.content
+  %section.user-subtitle
+    .align-center
+      %h3.subtitle= resource.page.subtitle
+
+  %article.user-description
+    .align-center
+      %p.description= resource.page.description
+
+  %address
+    .align-center
+      %p
+        Email:
+        = mail_to(resource.page.email, nil, :class => 'email')
+      %p
+        Telefone:
+        %tel.phone= resource.page.phone
+      %p
+        Endereço:
+        %span.address= resource.page.address
+
+  %aside.social-network
+    .align-center
+      = social_network_to(:linkedin, resource.page.linkedin)
+      = social_network_to(:orkut, resource.page.orkut)
+      = social_network_to(:facebook, resource.page.facebook)
+      = social_network_to(:twitter, resource.page.twitter)
+
+- content_for :title do
+  = resource.page.title

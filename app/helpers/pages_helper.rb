@@ -1,9 +1,11 @@
-module InformationsHelper
+module PagesHelper
   def social_network_to(network, username)
     link_to network.to_s, social_network_url(network, username), :class => network.to_s, :target => :blank, :style => username.blank? ? 'display:none' : ''
   end
 
   def social_network_url(network, username)
+    username ||= ''
+
     case network
     when :twitter
       'http://twitter.com/' + username
