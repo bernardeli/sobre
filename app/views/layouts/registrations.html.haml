@@ -1,0 +1,43 @@
+!!! 5
+%html{:lang => "pt-br"}
+  %head
+    %meta{:charset => "UTF-8"}
+    = stylesheet_link_tag 'application'
+    %title= yield :title
+
+  %body
+    .all-content
+      %section.faixa Já é um usuário?
+      %header
+        .align-center
+          = image_tag ("logo.png")
+      .content
+        .align-center
+          .video
+          = yield
+          
+          %ul.bullets
+            %li
+              %h4 Acesse sua conta
+              %p
+                Sem a necessidade de conhecimento técnico,
+                você pode ter a sua página na internet em x
+                apenas <b>1 passo</b>. Mais barato que uma xxxx
+            %li
+              %h4 Acesse sua conta
+              %p
+                Sem a necessidade de conhecimento técnico,
+                você pode ter a sua página na internet em x
+                apenas <b>1 passo</b>. Mais barato que uma xxxx
+            %li.no-right-margin
+              %h4 Acesse sua conta
+              %p
+                Sem a necessidade de conhecimento técnico,
+                você pode ter a sua página na internet em x
+                apenas <b>1 passo</b>. Mais barato que uma xxxx
+                
+
+      %footer
+        .align-center
+          %p Sob.re | Todos os direitos reservados
+        = yield :footer

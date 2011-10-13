@@ -1,20 +1,21 @@
-%h2 Sign up
 
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
-
-  %div
+.form_registration
+  %p
+    Sem a necessidade de conhecimento técnico, você pode ter a 
+    sua página na internet em apenas 1 passo. Mais barato que 
+    uma hospedagem e sem o custo de contratar um profissional.
+    
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    = devise_error_messages!
+  
     = f.label :username
-    %br= f.text_field :username
+    = f.text_field :username, :placeholder => "USUÁRIO"
 
-  %div
     = f.label :email
-    %br= f.email_field :email
-
-  %div
+    = f.email_field :email, :placeholder => "EMAIL"
+    
     = f.label :password
-    %br= f.password_field :password
+    = f.password_field :password, :placeholder => "SENHA"
 
-  %div= f.submit "Sign up"
-
-= render :partial => "devise/shared/links"
+    %button{ :class => "shiny-blue" }
+      Cadastrar

@@ -1,6 +1,6 @@
 Sobre::Application.routes.draw do
   devise_for :users do
-    root :to => 'devise/sessions#new'
+    root :to => 'devise/registrations#new'
   end
 
   resources :welcome, :only => :index

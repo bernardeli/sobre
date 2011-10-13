@@ -57,6 +57,7 @@ module Sobre
     end
 
     config.to_prepare do
+      Devise::RegistrationsController.layout "registrations"
       Devise::SessionsController.layout "sessions"
     end
   end

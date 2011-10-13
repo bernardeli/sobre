@@ -32,6 +32,10 @@ body {
   background: white;
 }
 
+li{
+  list-style: none;
+}
+
 /* Tables still need 'cellspacing="0"' in the markup. */
 table {
   border-collapse: separate;
@@ -68,6 +72,8 @@ html[xmlns] .clearfix {display: block;}
   src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url('http://themes.googleusercontent.com/static/fonts/ubuntucondensed/v1/DBCt-NXN57MTAFjitYxdrNxB8OB85xaNTJvVSB9YUjQ.woff') format('woff');
 }
 
+.no-right-margin{margin-right:0 !important}
+
 body{
   font-family: 'Ubuntu Condensed';
 }
@@ -91,7 +97,7 @@ body{
 }
 
 .all-content{
-  background: url(<%= asset_path('body-background.png') %>) repeat-x;
+  background: #DDD url(<%= asset_path('body-background.png') %>) repeat-x;
   min-height:100%;
   position:relative;
 }
@@ -114,7 +120,7 @@ section.faixa{
 }
 
 .content{
-  padding-bottom: 27px;   /* Mesma Altura do Rodapé */
+  padding-bottom: 40px;   /* Mesma Altura do Rodapé */
 }
 
 .form_registration{
@@ -122,8 +128,9 @@ section.faixa{
   float: right;
   width: 375px;
   p{
+    font-size: 20px;
+    margin: 40px 0 60px 0;
     text-align: justify;
-    margin-bottom: 20px;
   }
   form{
     label{display: none;}
@@ -137,6 +144,39 @@ section.faixa{
       padding: 5px;
       width: 96%;
     }
+    button.shiny-blue {
+      background-color: #5284E4;
+      background-image: -moz-linear-gradient(center top , #5284E4 0%, #376FE0 50%, #1A5AD9 50%, #2463DE 100%);
+      border-color: #1F58CC #1B4DB3 #174299;
+      border-radius: 4px 4px 4px 4px;
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: 0 0 2px 0 rgba(57, 140, 255, 0.8) inset;
+      color: #FFFFFF;
+      float: right;
+      font: bold 12px "helvetica neue",helvetica,arial,sans-serif;
+      padding: 7px 0;
+      text-shadow: 0 -1px 1px #1A5AD9;
+      width: 150px;
+    }
+  }
+  a{
+    color: #676767;
+    font-size: 13px;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.bullets{
+  clear: both;
+  li{
+    float: left;
+    font-size: 20px;
+    margin: 50px 50px 50px 0;
+    width: 300px;
   }
 }
 
