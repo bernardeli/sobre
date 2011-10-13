@@ -53,7 +53,6 @@ module Sobre
     config.generators do |g|
       g.test_framework :rspec, :fixtures => false
       g.orm :mongoid
-      g.template_engine :haml
     end
 
     config.to_prepare do
