@@ -57,7 +57,7 @@ module Sobre
     end
 
     config.to_prepare do
-      Devise::SessionsController.layout "application"
+      Devise::SessionsController.layout "sessions"
     end
   end
 end
