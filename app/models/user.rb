@@ -15,6 +15,10 @@ class User < ActiveRecord::Base
 
   after_create :add_new_information_for_user
 
+  def theme
+    'theme-01'
+  end
+
   private
 
   def add_new_information_for_user
