@@ -1,3 +1,8 @@
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
+$().ready(function(){
+  $('.login').click(function(){
+    $('#login').toggle();
+  })
+});

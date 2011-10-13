@@ -3,20 +3,23 @@
   %head
     %meta{:charset => "UTF-8"}
     = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
     %title= yield :title
 
   %body
     .all-content
-      %section.faixa Já é um usuário?
+      %section.faixa= link_to "Já é um usuário?", "#", :class => 'login'
+      = render 'shared/login'
+
       %header
         .align-center
-          = image_tag ("logo.png")
+          = image_tag "logo.png"
           = render :partial => "shared/menu"
       .content
         .align-center
           .video
           = yield
-          
+
           %ul.bullets
             %li
               %h4 Crie
@@ -36,7 +39,7 @@
                 sua empresa na internet,<br />
                 obtenha novos contatos e<br />
                 oportunidades de negócio.
-                
+
 
       %footer
         .align-center
