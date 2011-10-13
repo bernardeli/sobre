@@ -1,11 +1,15 @@
 !!! 5
-%html
+%html{:lang => "pt-br"}
   %head
-    %title Sobre
-    = stylesheet_link_tag 'application'
-  %body
-    = yield
+    %meta{:charset => "UTF-8"}
+    = stylesheet_link_tag 'themes'
+    %title= yield :title
+
+  %body{:class => user_signed_in? ? current_user.theme : @user.theme}
+    .all-content
+      = yield
 
     %footer
-      = javascript_include_tag 'application'
+      .align-center
+        %p Sob.re | Todos os direitos reservados
       = yield :footer
