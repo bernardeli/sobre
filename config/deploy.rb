@@ -34,7 +34,7 @@ namespace :deploy do
  end
 
  task :symlink_config do
-   run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+   run "ln -nfs #{shared_path}/config/mongoid.yml #{release_path}/config/mongoid.yml"
  end
 end
 
