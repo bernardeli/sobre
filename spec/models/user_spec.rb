@@ -1,17 +1,24 @@
 require 'spec_helper'
 
 describe User do
-  before(:each) { @user = Factory(:user) }
-
-  it { should validate_uniqueness_of :username }
-  it { should have_one :information }
-
+  describe "associations" do
+    it "embeds one page object" do
+      subject.associations.keys.should include 'page'
+    end
+  end
 
   describe "validations" do
-    it "validates presence of on update" do
-      @user.username = ''
-      @user.valid?.should be_false
-      @user.errors.get(:username).should_not be_empty
+    it "validates presence of username on update" do
+      user = Factory(:user, :username => '')
+      user.valid?.should be_false
+      user.errors.get(:username).should_not be_empty
+    end
+
+    it "should validate uniqueness of username" do
+      user_created = Factory(:user)
+      user = Factory.build(:user, :username => user_created.username)
+      user.valid?.should be_false
+      user.errors.get(:username).should_not be_empty
     end
 
     context "when username is alphanumeric" do
@@ -43,9 +50,9 @@ describe User do
     end
   end
 
-  describe "after_save" do
-    it "creates information association for user" do
-      Factory(:user).information.should_not be_nil
+  describe "after_create" do
+    it "creates page association for user" do
+      Factory(:user).page.should_not be_nil
     end
   end
 end

@@ -1,6 +1,10 @@
-class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+class User
+  include Mongoid::Document
+
+  field :username, :type => String
+
+  embeds_one :page
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -13,17 +17,9 @@ class User < ActiveRecord::Base
 
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
 
-  has_one :information
-
-  after_create :add_new_information_for_user
+  after_create :create_page
 
   def theme
     'theme-01'
-  end
-
-  private
-
-  def add_new_information_for_user
-    create_information
   end
 end

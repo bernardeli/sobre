@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
-require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
@@ -52,7 +51,9 @@ module Sobre
     config.assets.version = '1.0'
 
     config.generators do |g|
-      g.test_framework :rspec
+      g.test_framework :rspec, :fixtures => false
+      g.orm :mongoid
+      g.template_engine :haml
     end
 
     config.to_prepare do

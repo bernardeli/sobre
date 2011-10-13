@@ -4,6 +4,6 @@ class UsersController < InheritedResources::Base
   private
 
   def resource
-    @user = User.find_by_username(params[:username])
+    @user = User.where(:username => params[:username]).first
   end
 end

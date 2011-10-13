@@ -6,7 +6,8 @@ gem 'inherited_resources'
 gem 'therubyracer'
 gem 'jquery-rails', '>= 1.0.12'
 gem 'haml'
-gem 'mysql2'
+gem "mongoid", "~> 2.3"
+gem "bson_ext", "~> 1.4"
 
 group :assets do
   gem 'sass-rails', '~> 3.1.4'
@@ -29,4 +30,5 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'database_cleaner'
 end
