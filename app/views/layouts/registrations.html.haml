@@ -2,8 +2,12 @@
 %html{:lang => "pt-br"}
   %head
     %meta{:charset => "UTF-8"}
+    %meta{:name => "robots", :content => "index, follow"}
+    %meta{:name => "keywords", :content => "site fácil, site pronto, site sem conhecimento técnico"}
+    %meta{:name => "description", :content => "Criação de sites sem necessidade técnica, com apenas um único passo e um formulário simples, você coloca sua empresa na internet sem dor de cabeça."}
+  
     = stylesheet_link_tag 'application'
-    %title= yield :title
+    %title Sob.re sua empresa facilmente na internet
 
   %body
     .all-content
@@ -12,7 +16,9 @@
 
       %header
         .align-center
-          = image_tag "logo.png"
+          = link_to image_tag("logo.png"), "/"
+
+
           = render :partial => "shared/menu"
       .content
         .align-center
