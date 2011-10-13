@@ -9,12 +9,12 @@
     %span
       = link_to "Blog", "#"
 
-  %li{:class => selected_class(get_started_welcome_index_path)}
+  %li{:class => selected_class(get_started_path)}
     %span.seta
     %span
-      = link_to "Conheça", get_started_welcome_index_path
+      = link_to "Conheça", get_started_path
 
-  %li
+  %li{:class => selected_class(contact_path)}
     %span.seta
     %span
-      = link_to "Contato", "#", :class => "last"
+      = link_to "Contato", contact_path, :class => "last"

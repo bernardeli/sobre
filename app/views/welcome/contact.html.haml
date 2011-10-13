@@ -1,0 +1,12 @@
+%h4 Entre em contato
+= form_tag dispatch_email_path, :method => :post do
+  = label_tag 'contact_name', 'Nome'
+  = text_field_tag 'contact[name]'
+
+  = label_tag 'contact_email', 'Email'
+  = text_field_tag 'contact[email]'
+
+  = label_tag 'contact_message', 'Mensagem'
+  = text_area_tag 'contact[message]'
+
+  = submit_tag "Enviar"

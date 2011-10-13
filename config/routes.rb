@@ -7,11 +7,10 @@ Sobre::Application.routes.draw do
   resources :dashboard, :only => :index
   resources :users, :only => :show
   resources :pages, :only => :update
-  resources :welcome, :only => [] do
-    collection do
-      get 'get_started'
-    end
-  end
+
+  match '/get_started' => "welcome#get_started", :as => 'get_started'
+  match '/contact' => "welcome#contact", :as => 'contact'
+  match '/dispatch_email' => "welcome#dispatch_email", :as => 'dispatch_email'
 
   match '/:username' => 'users#show'
 end
