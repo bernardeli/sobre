@@ -8,9 +8,9 @@ Sobre::Application.routes.draw do
   resources :users, :only => :show
   resources :pages, :only => :update
 
-  match '/get_started' => "welcome#get_started", :as => 'get_started'
-  match '/contact' => "welcome#contact", :as => 'contact'
-  match '/dispatch_email' => "welcome#dispatch_email", :as => 'dispatch_email'
+  get '/get_started' => "welcome#get_started", :as => 'get_started'
+  get '/contact' => "welcome#contact", :as => 'contact'
+  post '/dispatch_email' => "welcome#dispatch_email", :as => 'dispatch_email'
 
   match '/:username' => 'users#show'
 end
