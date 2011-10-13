@@ -1,5 +1,6 @@
-= link_to 'Edit user', edit_user_registration_path
-= link_to 'Logout', destroy_user_session_path, :method => :delete
+= link_to 'Editar perfil', edit_user_registration_path
+= link_to 'Sair', destroy_user_session_path, :method => :delete
+= link_to 'Editar página', "#", :class => 'trigger-form'
 
 = render 'information_form'
 = render 'shared/user_information', :resource => current_user

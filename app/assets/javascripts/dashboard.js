@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require jquery.autosave
 
 $().ready(function(){
@@ -17,6 +18,8 @@ $().ready(function(){
       setInterval(function() { $(".save").hide('slow') }, 2500);
     }
   });
+
+  $("#information-form").draggable();
 
   setInterval(function() { $(".title").html($('form.edit_information #information_title').val()) }, 1000);
   setInterval(function() { $(".subtitle").html($('form.edit_information #information_subtitle').val()) }, 1000);
