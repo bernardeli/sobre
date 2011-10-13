@@ -3,7 +3,6 @@
   %head
     %meta{:charset => "UTF-8"}
     = stylesheet_link_tag 'application'
-    = javascript_include_tag 'application'
     %title= yield :title
 
   %body
@@ -17,31 +16,9 @@
           = render :partial => "shared/menu"
       .content
         .align-center
-          .video
           = yield
-
-          %ul.bullets
-            %li
-              %h4 Crie
-              %p
-                Uma página para a sua<br />
-                empresa em poucos minutos.<br />
-                É rápido e fácil.
-            %li
-              %h4 Informe
-              %p
-                Seu telefone, endereço<br />
-                e e-mail e seja facilmente<br />
-                encontrado por clientes.
-            %li.no-right-margin
-              %h4 Divulgue
-              %p
-                sua empresa na internet,<br />
-                obtenha novos contatos e<br />
-                oportunidades de negócio.
-
 
       %footer
         .align-center
           %p Sob.re | Todos os direitos reservados
-        = yield :footer
+        = javascript_include_tag 'application'

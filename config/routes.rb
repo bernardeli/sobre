@@ -7,6 +7,11 @@ Sobre::Application.routes.draw do
   resources :dashboard, :only => :index
   resources :users, :only => :show
   resources :pages, :only => :update
+  resources :welcome, :only => [] do
+    collection do
+      get 'get_started'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

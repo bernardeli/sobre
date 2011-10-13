@@ -1,18 +1,18 @@
 %ul.menu
-  %li
+  %li{:class => selected_class('/')}
     %span.seta
     %span
       = link_to "Home", "/"
 
-  %li
+  %li{:class => selected_class('/blog')}
     %span.seta
     %span
       = link_to "Blog", "#"
 
-  %li.selected
+  %li{:class => selected_class(get_started_welcome_index_path)}
     %span.seta
     %span
-      = link_to "Conheça", "#"
+      = link_to "Conheça", get_started_welcome_index_path
 
   %li
     %span.seta
