@@ -8,4 +8,11 @@ class ContactMailer < ActionMailer::Base
          :subject => "[Sob.re Contato] #{@contact_info[:name]} - #{@contact_info[:email]}",
          :date => Time.now)
   end
+
+  def welcome_email(user)
+    @user = user
+
+    mail(:from => 'contato@sob.re',
+         :subject => "Bem-vindo ao Sob.re")
+  end
 end

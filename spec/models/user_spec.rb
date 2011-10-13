@@ -54,5 +54,11 @@ describe User do
     it "creates page association for user" do
       Factory(:user).page.should_not be_nil
     end
+
+    it "sends welcome email" do
+      user = Factory.build(:user)
+      ContactMailer.should_receive(:welcome_email).with(user).and_return(mock(ContactMailer, :deliver => true))
+      user.save
+    end
   end
 end
