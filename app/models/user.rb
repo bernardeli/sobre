@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
   validates_format_of :username, :with => /^[a-zA-Z0-9_]*$/i
 
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
+
   has_one :information
 
   after_create :add_new_information_for_user
