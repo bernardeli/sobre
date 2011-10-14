@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class PublicPagesController < ApplicationController
   layout 'registrations'
   respond_to :js
 

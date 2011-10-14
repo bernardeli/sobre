@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe WelcomeController do
+describe PublicPagesController do
   let(:parameters) { { "name" => "ricardo",
                        "email" => "ricardobcs@gmail.com",
                        "message" => "message cool" } }
