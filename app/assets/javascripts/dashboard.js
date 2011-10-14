@@ -1,7 +1,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery.maskedinput
 //= require jquery.autosave
 
 $().ready(function(){
@@ -19,7 +18,6 @@ $().ready(function(){
   });
 
   $("#page-form").draggable();
-  $("#page_phone").mask("(99) 9999-9999");
 
   setInterval(function() { $(".title").html($('form.edit_page #page_title').val()) }, 1000);
   setInterval(function() { $(".subtitle").html($('form.edit_page #page_subtitle').val()) }, 1000);
