@@ -30,5 +30,6 @@
       = social_network_to(:facebook, resource.page.facebook)
       = social_network_to(:twitter, resource.page.twitter)
 
-- content_for :title do
-  = resource.page.title
+- if title
+  - content_for :title do
+    = "Sob.re - #{resource.page.title}"

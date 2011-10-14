@@ -3,7 +3,10 @@
 = link_to 'Editar página', "#", :class => 'trigger-form'
 
 = render 'page_form'
-= render 'shared/user_page', :resource => current_user
+= render 'shared/user_page', :resource => current_user, :title => false
 
 - content_for :footer do
   = javascript_include_tag 'dashboard'
+
+- content_for :title do
+  = "Sob.re - Dashboard de #{current_user.identifier}"
