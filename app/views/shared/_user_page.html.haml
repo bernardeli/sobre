@@ -13,13 +13,13 @@
 
   %address
     .align-center
-      %p.email-layer
+      %p.email-layer{:style => resource.page.email.blank? ? 'display:none' : ''}
         Email:
         = mail_to(resource.page.email, nil, :class => 'email')
-      %p.phone-layer
+      %p.phone-layer{:style => resource.page.phone.blank? ? 'display:none' : ''}
         Telefone:
         %tel.phone= resource.page.phone
-      %p.address-layer
+      %p.address-layer{:style => resource.page.address.blank? ? 'display:none' : ''}
         Endereço:
         %span.address= resource.page.address
 
