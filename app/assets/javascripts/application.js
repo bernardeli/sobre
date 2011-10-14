@@ -3,6 +3,7 @@
 
 $().ready(function(){
   $('.login').click(function(){
-    $('#login').toggle();
+    $('#login').toggle("slow");
+    $(this).toggleClass("open-box");
   })
 });
