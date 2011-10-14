@@ -1,9 +1,19 @@
-= link_to 'Editar perfil', edit_user_registration_path
-= link_to 'Sair', destroy_user_session_path, :method => :delete
-= link_to 'Editar página', "#", :class => 'trigger-form'
+= stylesheet_link_tag "dashboard"
+
+.header-sobre
+  .align-center
+    = link_to image_tag("logo-menor.png"), "javascript:void(0);"
+    .user-details
+      = link_to 'Editar perfil', edit_user_registration_path
+      |
+      = link_to 'Sair', destroy_user_session_path, :method => :delete
+    .user-page
+      = link_to "http://www.sob.re/ronildo", "http://www.sob.re/ronildo"
+    = link_to 'Editar página', "#", :class => 'trigger-form'
 
 = render 'page_form'
-= render 'shared/user_page', :resource => current_user, :title => false
+.client-layout
+  = render 'shared/user_page', :resource => current_user, :title => false
 
 - content_for :footer do
   = javascript_include_tag 'dashboard'

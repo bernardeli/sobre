@@ -1,0 +1,153 @@
+.header-sobre{
+  background: #b7002e;
+  height: 100px;
+  position: fixed;
+  width: 100%;
+  img{
+    margin-top: 5px;
+  }
+  .user-details{
+    color: #FFF;
+    float: right;
+    font-size: 13px;
+    text-transform: uppercase;
+    a{
+      color: #FFF;
+      font-size: 13px;
+      text-decoration: none;
+      &:hover{
+       text-decoration: underline; 
+      }
+    }
+  }
+  .user-page{
+    clear: right;
+    float: right;
+    margin: 15px 0 0 0;
+    a{
+      color: #FFF;
+      font-size: 35px;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+div.client-layout{
+  padding-top: 100px;
+}
+
+
+a.trigger-form {
+  position: absolute;
+  text-decoration: none;
+  top: 80px;
+  right: -57px;
+  font-size: 20px;
+  letter-spacing:-1px;
+  font-family: verdana, helvetica, arial, sans-serif;
+  color:#fff;
+  padding: 20px;
+  font-weight: 700;
+  background: #333333;
+  border:1px solid #444444;
+  display: block;
+  z-index: 999;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#page-form {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  display: none;
+  background: #000;
+  width: 400px;
+  height: auto;
+  z-index: 999;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  .inside-page-form{
+    position: relative;
+    padding: 20px;
+    .close-form{
+      background: url(<%= asset_path("close-button.png") %>) no-repeat;
+      border: 0 none;
+      display: block;
+      height: 30px;
+      position: absolute;
+      right: -11px;
+      width: 30px;
+      text-indent: -5555em;
+      top: -11px;
+    }
+    .titulo-page-form{
+      background: #000;
+      color: #FFF;
+      font-size: 20px;
+      font-weight: 700;
+      left: -113px;
+      padding: 20px;
+      position: absolute;
+      top: 52px;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    form{
+      label{
+        display: block;
+        font-size: 14px;
+      }
+      input, textarea{
+        border: 1px solid #D1D1D1;
+        font-family: arial;
+        font-size: 15px;
+        font-weight: normal;
+        height: 13px;
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 94%;
+      }
+      textarea{
+        height: 40px;
+      }
+    }
+  }
+}
+
+#page-form p{
+  margin-bottom: 15px;
+  color: #cccccc;
+}
+
+#page-form a, #page-form a:visited{
+  margin: 0;
+  padding: 0;
+  color: #9FC54E;
+  text-decoration: none;
+  border-bottom: 1px solid #9FC54E;
+}
+
+#page-form a:hover, #page-form a:visited:hover{
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+p.save {
+  background: url(<%= asset_path('loading.gif') %>) no-repeat;
+  height: 20px;
+  margin: -10px 0 0 160px;
+  position: absolute;
+  width: 20px;
+  text-indent: -5555em;
+}

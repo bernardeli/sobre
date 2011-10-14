@@ -12,8 +12,8 @@ $().ready(function(){
     interval: 3000,
     monitor: 3000,
     save: function(e, o) {
-      $(".save").show('slow');
-      setInterval(function() { $(".save").hide('slow') }, 2500);
+      $(".save").show();
+      setInterval(function() { $(".save").hide() }, 2500);
     }
   });
 
