@@ -1,71 +1,60 @@
-body.theme-01 {
-  font-family: 'Ubuntu Condensed';
+.theme-01{
+  font-family: Tahoma;
 
-  .align-center{
-    margin: 0 auto;
-    opacity: 1;
-    width: 980px;
+  .all-content{
+    background: #E9E9E7;
   }
 
-  header{
-    background: url(<%= asset_path('background-header.jpg') %>) repeat-x;
-    height: 94px;
+  header.titulo{
+    background: url(<%= image_path("theme-01/header-background.png") %>) repeat-x;
+    height: 155px;
+  }
+  header.titulo h2{
+    color: #6B9DB8;
+    font-size: 65px;
+  }
+
+  header.sub-titulo{
+    color: #464646;
+    font-size: 35px;
+    margin: -65px 0 30px 0;
   }
 
   section.content{
-    background: url(<%= asset_path('pattern-content.png') %>) no-repeat top center;
-
-    height: 400px;
+    background: url(<%= image_path("theme-01/content-background.png") %>) repeat-x;
+    height: 235px;
+    padding-top: 15px;
   }
 
-  section.user-subtitle{
-    background: #000;
-    opacity: 0.5;
-  }
-
-  section.user-subtitle h3{
-    color: #fff;
-    height: 43px;
-    line-height: 43px;
-  }
-
-  article.user-description p{
+  article p.description{
     color: #FFF;
-    margin: 20px 0 0 0;
-    width: 500px;
+    float: left;
+    height: 195px;
+    overflow: hidden;
+    width: 570px;
   }
 
-  address{
+  aside section{
+    float: right;
+    margin: 30px 0 0 0;
+  }
+
+  section.address-content{
     color: #FFF;
     margin-top: 20px;
+    width: 340px;
   }
 
-  address a{
-    color: #FFF;
+  section.address-content span.e-mail,
+  section.address-content span.telephone,
+  section.address-content span.endereco
+  {
+    font-weight: bold;
   }
 
-  aside.social-network{
-    margin-top: -50px;
-  }
-
-  aside.social-network a{
-    display: block;
-    float: right;
-    height: 78px;
-    margin-left: 10px;
-    width: 79px;
-    text-indent: -5555em;
-  }
-
-  aside.social-network a.twitter{background: url(<%= asset_path('twitter.png') %>);}
-  aside.social-network a.facebook{background: url(<%= asset_path('facebook.png') %>);}
-  aside.social-network a.orkut{background: url(<%= asset_path('orkut.png') %>);}
-  aside.social-network a.linkedin{background: url(<%= asset_path('linkedin.png') %>);}
-
-  footer{
-    background: #234A63;
-    color: #FFF;
-    line-height: 27px;
+  footer p{
+    color: #464646;
+    font-size: 14px;
     text-align: center;
   }
 }

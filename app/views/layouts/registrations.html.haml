@@ -13,7 +13,7 @@
     .all-content
       %section.faixa
         .align-center
-          = link_to "Já é um usuário?", "#", :class => 'login-link'
+          = link_to "Já é um usuário?", "#", :class => 'login-link' unless current_user
 
       %section.login
         .align-center
@@ -22,8 +22,6 @@
       %header
         .align-center
           = link_to image_tag("logo.png"), "/", :class => "logo"
-
-
           = render :partial => "shared/menu"
       .content
         .align-center

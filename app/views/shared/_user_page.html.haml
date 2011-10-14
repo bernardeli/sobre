@@ -1,34 +1,42 @@
-%header
+%header.titulo
   .align-center
     %h2.title= resource.page.title
 
-%section.content
-  %section.user-subtitle
-    .align-center
-      %h3.subtitle= resource.page.subtitle
+%header.sub-titulo
+  .align-center
+    %h3.subtitle= resource.page.subtitle
 
-  %article.user-description
+%section.content
+  %article
     .align-center
       %p.description= resource.page.description
 
-  %address
+  %aside.network
     .align-center
-      %p.email-layer{:style => resource.page.email.blank? ? 'display:none' : ''}
-        Email:
-        = mail_to(resource.page.email, nil, :class => 'email')
-      %p.phone-layer{:style => resource.page.phone.blank? ? 'display:none' : ''}
-        Telefone:
-        %tel.phone= resource.page.phone
-      %p.address-layer{:style => resource.page.address.blank? ? 'display:none' : ''}
-        Endereço:
-        %span.address= resource.page.address
+      %section.network
+        = social_network_to(:linkedin, resource.page.linkedin)
+        = social_network_to(:orkut, resource.page.orkut)
+        = social_network_to(:facebook, resource.page.facebook)
+        = social_network_to(:twitter, resource.page.twitter)
 
-  %aside.social-network
+  %aside.address-content
     .align-center
-      = social_network_to(:linkedin, resource.page.linkedin)
-      = social_network_to(:orkut, resource.page.orkut)
-      = social_network_to(:facebook, resource.page.facebook)
-      = social_network_to(:twitter, resource.page.twitter)
+      %section.address-content
+        %p.email-layer{:style => resource.page.email.blank? ? 'display:none' : ''}
+          %span.e-mail
+            Email:
+          %span.email-client
+            = mail_to(resource.page.email, nil, :class => 'email')
+        %p.phone-layer{:style => resource.page.phone.blank? ? 'display:none' : ''}
+          %span.telephone
+            Telefone:
+          %span.email-client.phone
+            = resource.page.phone
+        %address.address-layer{:style => resource.page.address.blank? ? 'display:none' : ''}
+          %span.endereco
+            Endereço:
+          %span.endereco-client.address
+            = resource.page.address
 
 - if title
   - content_for :title do
