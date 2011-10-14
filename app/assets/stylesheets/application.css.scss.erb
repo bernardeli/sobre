@@ -235,11 +235,11 @@ a.logo{
     margin: 50px 0 0 60px;
     width: 438px;
 
-    
+
     border: 1px solid #CCC;
   }
 
-  
+
   .sombra-left-top{
     background: url(<%= asset_path('border-top-left.png') %>) no-repeat;
     position: absolute;
@@ -249,7 +249,7 @@ a.logo{
     top: -7px;
     z-index: 1000;
   }
-  
+
   .sombra-bottom-right{
     background: url(<%= asset_path('border-bottom-right.png') %>) no-repeat;
     bottom: -135px;
@@ -470,3 +470,9 @@ p.save {
   background: url(<%= asset_path('loading.gif') %>) no-repeat;
   text-indent: -5555em;
 }
+
+.field_with_errors {
+  input { border: 1px solid red !important; }
+}
+
+.formError { color: red; }
