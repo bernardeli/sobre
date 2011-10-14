@@ -1,42 +1,43 @@
 #page-form{:style => 'display:none'}
   .inside-page-form
-    .titulo-page-form
-      Editar página
-    %p.save{:style => 'display:none'} Salvando...
-    = link_to "fechar", "#", :class => 'close-form', :title => "Esconder"
-    = form_for current_user.page, :method => :put do |f|
-      -#%p
-        - %w( 01 02 03 ).each do |theme|
-          = f.radio_button :theme, theme, :class => 'theme'
-          = f.label "theme_#{theme}", theme
-          %br
-      %p
-        = f.label :title, "Título"
-        = f.text_field :title
-      %p
-        = f.label :subtitle, "Subtítulo"
-        = f.text_field :subtitle
-      %p
-        = f.label :description, "Descrição"
-        = f.text_area :description
-      %p
-        = f.label :twitter, "Twitter"
-        = f.text_field :twitter
-      %p
-        = f.label :facebook, "Facebook"
-        = f.text_field :facebook
-      %p
-        = f.label :linkedin, "Linkedin"
-        = f.text_field :linkedin
-      %p
-        = f.label :orkut, "Orkut"
-        = f.text_field :orkut
-      %p
-        = f.label :address, "Endereço"
-        = f.text_field :address
-      %p
-        = f.label :phone, "Telefone"
-        = f.phone_field :phone
-      %p
-        = f.label :email, "Email"
-        = f.email_field :email
+    .scroll-from
+      .titulo-page-form
+        Editar página
+      %p.save{:style => 'display:none'} Salvando...
+      = link_to "fechar", "#", :class => 'close-form', :title => "Esconder"
+      = form_for current_user.page, :method => :put do |f|
+        -#%p
+          - %w( 01 02 03 ).each do |theme|
+            = f.radio_button :theme, theme, :class => 'theme'
+            = f.label "theme_#{theme}", theme
+            %br
+        %p
+          = f.label :title, "Título"
+          = f.text_field :title
+        %p
+          = f.label :subtitle, "Subtítulo"
+          = f.text_field :subtitle
+        %p
+          = f.label :description, "Descrição"
+          = f.text_area :description
+        %p
+          = f.label :twitter, "Twitter"
+          = f.text_field :twitter
+        %p
+          = f.label :facebook, "Facebook"
+          = f.text_field :facebook
+        %p
+          = f.label :linkedin, "Linkedin"
+          = f.text_field :linkedin
+        %p
+          = f.label :orkut, "Orkut"
+          = f.text_field :orkut
+        %p
+          = f.label :address, "Endereço"
+          = f.text_field :address
+        %p
+          = f.label :phone, "Telefone"
+          = f.phone_field :phone
+        %p
+          = f.label :email, "Email"
+          = f.email_field :email
