@@ -58,6 +58,7 @@ module Sobre
     config.to_prepare do
       Devise::RegistrationsController.layout "registrations"
       Devise::SessionsController.layout "registrations"
+      Devise::PasswordsController.layout "registrations"
     end
   end
 end
