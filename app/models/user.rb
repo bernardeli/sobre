@@ -21,7 +21,7 @@ class User
   after_create :send_welcome_email
 
   def theme
-    'theme-01'
+    "theme-" + page.theme
   end
 
   private

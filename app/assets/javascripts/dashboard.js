@@ -7,6 +7,7 @@
 $().ready(function(){
   $(".trigger-form").click(sobre.togglePageForm);
   $(".close-form").click(sobre.togglePageForm);
+  $(".theme").change(sobre.addNewClass);
 
   $('form.edit_page').autosave({
     interval: 3000,
@@ -51,5 +52,9 @@ sobre = {
     $("#page-form").toggle("fast");
     $(".trigger-form").toggle("fast");
     return false;
+  },
+
+  addNewClass: function() {
+    $("body").removeClass().addClass("theme-" + $(this).val());
   }
 }

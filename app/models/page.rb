@@ -11,6 +11,7 @@ class Page
   field :address,     :type => String
   field :phone,       :type => String
   field :email,       :type => String
+  field :theme,       :type => String, :default => '01'
 
   embedded_in :user
 end
