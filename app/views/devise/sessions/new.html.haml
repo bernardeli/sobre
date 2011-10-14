@@ -7,6 +7,7 @@
     = f.label :password
     = f.password_field :password, :placeholder => "SENHA"
 
-    = f.submit 'Sign in'
+    %button{ :class => "shiny-blue" }
+      Entrar
 
   = render 'devise/shared/links'
