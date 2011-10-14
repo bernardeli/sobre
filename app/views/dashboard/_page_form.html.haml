@@ -3,6 +3,11 @@
   = link_to "fechar", "#", :class => 'close-form'
   = form_for current_user.page, :method => :put do |f|
     %p
+      - %w( 01 02 03 ).each do |theme|
+        = f.radio_button :theme, theme, :class => 'theme'
+        = f.label "theme_#{theme}", theme
+        %br
+    %p
       = f.label :title
       = f.text_field :title
     %p
