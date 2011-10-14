@@ -1,4 +1,4 @@
-#login{:style => "display:none"}
+#login-box{:style => "display:none"}
   = form_for(:user, :url => session_path(:user)) do |f|
     = f.label :email
     = f.email_field :email, :placeholder => "EMAIL"

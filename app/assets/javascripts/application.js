@@ -2,8 +2,8 @@
 //= require jquery_ujs
 
 $().ready(function(){
-  $('.login').click(function(){
-    $('#login').toggle("slow");
+  $('.login-link').click(function(){
+    $('#login-box').toggle("slow");
     $(this).toggleClass("open-box");
   })
 });
