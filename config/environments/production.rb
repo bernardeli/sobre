@@ -21,12 +21,9 @@ Sobre::Application.configure do
   config.assets.digest = true
 
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => "smtp.gmail.com",
-                                         :port => "587",
-                                         :domain => "estaronline.com.br",
-                                         :authentication => :plain,
-                                         :user_name => "sobreproject@gmail.com",
-                                         :password => "saasdev1818" }
+  config.action_mailer.smtp_settings = { :address => 'localhost',
+                                         :port => 25,
+                                         :enable_starttls_auto => false }
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
