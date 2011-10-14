@@ -19,12 +19,12 @@ $().ready(function(){
 
   $("#page-form").draggable();
 
-  setInterval(function() { $(".title").html($('form.edit_page #page_title').val()) }, 1000);
-  setInterval(function() { $(".subtitle").html($('form.edit_page #page_subtitle').val()) }, 1000);
-  setInterval(function() { $(".description").html($('form.edit_page #page_description').val()) }, 1000);
-  setInterval(function() { sobre.layer("phone") }, 1000);
-  setInterval(function() { sobre.layer("address") }, 1000);
-  setInterval(function() { sobre.layer("email") }, 1000);
+  setInterval(function() { $(".title").html($('form.edit_page #page_title').val() || "Edite seu título") }, 1000);
+  setInterval(function() { $(".subtitle").html($('form.edit_page #page_subtitle').val() || "Edite seu subtítulo") }, 1000);
+  setInterval(function() { $(".description").html($('form.edit_page #page_description').val() || "Edite sua descrição") }, 1000);
+  setInterval(function() { sobre.layer("phone", "Edite seu telefone") }, 1000);
+  setInterval(function() { sobre.layer("address", "Edite seu endereço") }, 1000);
+  setInterval(function() { sobre.layer("email", "Edite seu email") }, 1000);
   setInterval(function() { sobre.interval("twitter", "http://twitter.com/") }, 1000);
   setInterval(function() { sobre.interval("facebook", "http://facebook.com/") }, 1000);
   setInterval(function() { sobre.interval("linkedin", "http://linkedin.com/in/") }, 1000);
@@ -34,16 +34,16 @@ $().ready(function(){
 var sobre = sobre || {};
 
 sobre = {
-  layer: function(field) {
+  layer: function(field, msg) {
     val = $('form.edit_page #page_' + field).val();
 
-    if (val == "") {
-      $("." + field + "-layer").hide();
-    } else {
+    //if (val == "") {
+      //$("." + field + "-layer").hide();
+    //} else {
       $("." + field + "-layer").show();
-    }
+    //}
 
-    $("." + field).html(val);
+    $("." + field).html(val || msg);
   },
 
   interval: function(field, urlBase) {
@@ -51,11 +51,7 @@ sobre = {
     url = urlBase + username
     fieldId = "." + field;
     $(fieldId).attr("href", url);
-    if (username == "") {
-      $(fieldId).hide();
-    } else {
-      $(fieldId).show();
-    }
+    $(fieldId).show();
   },
 
   togglePageForm: function() {

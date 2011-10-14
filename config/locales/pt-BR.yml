@@ -8,10 +8,12 @@ pt-BR:
         user:
           attributes:
             username:
-              blank: insira um usuário
-              taken: usuário já em uso
+              blank: insira um username
+              taken: username já em uso
+              invalid: insira um username inválido
             email:
               blank: insira um email
+              invalid: insira um email válido
             password:
               blank: insira uma senha
 
