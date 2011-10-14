@@ -8,11 +8,7 @@ describe User do
   end
 
   describe "validations" do
-    it "validates presence of username on update" do
-      user = Factory(:user, :username => '')
-      user.valid?.should be_false
-      user.errors.get(:username).should_not be_empty
-    end
+    it { should validate_presence_of :username }
 
     it "should validate uniqueness of username" do
       user_created = Factory(:user)
