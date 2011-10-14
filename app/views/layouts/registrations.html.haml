@@ -11,8 +11,13 @@
 
   %body
     .all-content
-      %section.faixa= link_to "Já é um usuário?", "#", :class => 'login'
-      = render 'shared/login'
+      %section.faixa
+        .align-center
+          = link_to "Já é um usuário?", "#", :class => 'login'
+          
+      %section.login
+        .align-center
+          = render 'shared/login'
 
       %header
         .align-center

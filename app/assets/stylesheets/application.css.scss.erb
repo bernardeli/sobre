@@ -108,8 +108,6 @@ section.faixa{
   color: #FFF;
   height: 29px;
   line-height: 29px;
-  padding-right: 30px;
-  position: relative;
   text-align: right;
   a{
     color: #FFF;
@@ -118,6 +116,9 @@ section.faixa{
   }
   a.open-box{
     background: #FFF;
+    -webkit-transition: background-color .5s linear;
+    transition: background-color .5s linear;
+    -moz-transition: background-color .5s linear;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
     color: #676767;
@@ -125,21 +126,26 @@ section.faixa{
     float: right;
     height: 19px;
     line-height: normal;
-    margin: 6px -10px 0 0;
+    margin: 6px 0 0 0;
     padding: 4px 10px 0 0;
     width: 110px;
   }
 }
 
+section.login{
+  margin: 0 auto;
+  position: relative;
+  width: 1000px;
+}
 div#login{
   background: #FFF;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   padding: 10px;
   position: absolute;
-  right: 20px;
+  right: 0;
   width: 222px;
-  top: 30px;
+  top: 0;
   z-index: 200;
   form{
     label{display: none;}
