@@ -4,7 +4,7 @@ class ContactMailer < ActionMailer::Base
   def contact_email(contact_info)
     @contact_info = contact_info.symbolize_keys
 
-    mail(:from => 'contato@sob.re',
+    mail(:from => 'contato@estaronline.com.br',
          :subject => "[Sob.re Contato] #{@contact_info[:name]} - #{@contact_info[:email]}",
          :date => Time.now)
   end
@@ -12,7 +12,7 @@ class ContactMailer < ActionMailer::Base
   def welcome_email(user)
     @user = user
 
-    mail(:from => 'contato@sob.re',
+    mail(:from => 'contato@estaronline.com.br',
          :subject => "Bem-vindo ao Sob.re")
   end
 end

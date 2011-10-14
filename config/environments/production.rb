@@ -20,7 +20,10 @@ Sobre::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.action_mailer.delivery_method = :postfix
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => 'localhost',
+					 :port => 25,
+					 :enable_starttls_auto => false }
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
