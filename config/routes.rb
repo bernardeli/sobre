@@ -11,5 +11,5 @@ Sobre::Application.routes.draw do
   get '/contact' => "public_pages#contact", :as => 'contact'
   post '/dispatch_email' => "public_pages#dispatch_email", :as => 'dispatch_email'
 
-  match '/:username' => 'users#show'
+  match '/:username' => 'users#show', :as => 'users_show'
 end

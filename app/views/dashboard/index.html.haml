@@ -8,7 +8,7 @@
       |
       = link_to 'Sair', destroy_user_session_path, :method => :delete
     .user-page
-      = link_to "http://www.sob.re/ronildo", "http://www.sob.re/ronildo"
+      = link_to users_show_url(current_user.username), users_show_url(current_user.username)
     = link_to 'Editar página', "#", :class => 'trigger-form'
 
 = render 'page_form'
