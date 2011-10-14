@@ -24,9 +24,9 @@ $().ready(function(){
   setInterval(function() { $(".title").html($('form.edit_page #page_title').val()) }, 1000);
   setInterval(function() { $(".subtitle").html($('form.edit_page #page_subtitle').val()) }, 1000);
   setInterval(function() { $(".description").html($('form.edit_page #page_description').val()) }, 1000);
-  setInterval(function() { $(".phone").html($('form.edit_page #page_phone').val()) }, 1000);
-  setInterval(function() { $(".address").html($('form.edit_page #page_address').val()) }, 1000);
-  setInterval(function() { $(".email").html($('form.edit_page #page_email').val()) }, 1000);
+  setInterval(function() { sobre.layer("phone") }, 1000);
+  setInterval(function() { sobre.layer("address") }, 1000);
+  setInterval(function() { sobre.layer("email") }, 1000);
   setInterval(function() { sobre.interval("twitter", "http://twitter.com/") }, 1000);
   setInterval(function() { sobre.interval("facebook", "http://facebook.com/") }, 1000);
   setInterval(function() { sobre.interval("linkedin", "http://linkedin.com/in/") }, 1000);
@@ -36,6 +36,18 @@ $().ready(function(){
 var sobre = sobre || {};
 
 sobre = {
+  layer: function(field) {
+    val = $('form.edit_page #page_' + field).val();
+
+    if (val == "") {
+      $("." + field + "-layer").hide();
+    } else {
+      $("." + field + "-layer").show();
+    }
+
+    $("." + field).html(val);
+  },
+
   interval: function(field, urlBase) {
     username = $("form.edit_page #page_" + field).val();
     url = urlBase + username
