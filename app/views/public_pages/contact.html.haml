@@ -4,12 +4,12 @@
   = form_tag dispatch_email_path, :method => :post, :remote => true do
     = label_tag 'contact_name', 'Nome'
     = text_field_tag 'contact[name]', nil, :placeholder => "Seu Nome"
-  
+
     = label_tag 'contact_email', 'Email'
     = text_field_tag 'contact[email]', nil, :placeholder => 'E-mail'
-  
+
     = label_tag 'contact_message', 'Mensagem'
     = text_area_tag 'contact[message]', nil, :placeholder => 'Sua Mensagem'
-  
+
     %button{:class => "shiny-blue"}
       Enviar
