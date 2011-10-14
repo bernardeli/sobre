@@ -1,31 +1,20 @@
-%h2= "Edit #{resource_name.to_s.humanize }"
-
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-  = devise_error_messages!
-
-  %div
+.form_registration
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
     = f.label :username
-    %br= f.text_field :username
+    = f.error_message_on :username
+    = f.text_field :username, :placeholder => "USERNAME"
 
-  %div
     = f.label :email
-    %br= f.email_field :email
+    = f.error_message_on :email
+    = f.email_field :email, :placeholder => "EMAIL"
 
-  %div
     = f.label :password
-    %br= f.password_field :password
+    = f.error_message_on :password
+    = f.password_field :password, :placeholder => "NOVA SENHA"
 
-  %div
     = f.label :current_password
-    %br= f.password_field :current_password
+    = f.error_message_on :current_password
+    = f.password_field :current_password, :placeholder => "INSIRA SENHA PARA SALVAR"
 
-  %div
-    = f.submit "Update"
-
-%h3 Cancel my account
-
-%p
-  Unhappy?
-  = link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete
-
-= link_to "Back", :back
+    %button{ :class => "shiny-blue" }
+      Cadastrar
