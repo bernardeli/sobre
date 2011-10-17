@@ -13,6 +13,7 @@ class ContactMailer < ActionMailer::Base
     @user = user
 
     mail(:from => 'contato@sob.re',
-         :subject => "Bem-vindo ao Sob.re")
+         :subject => "Bem-vindo ao Sob.re",
+         :to => user[:email])
   end
 end

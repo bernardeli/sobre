@@ -24,6 +24,11 @@ describe ContactMailer do
   end
 
   describe "#welcome_email" do
+    it "sends welcome email to user" do
+      ContactMailer.welcome_email(user).deliver
+      ActionMailer::Base.deliveries.last.to.should == [user.email]
+    end
+
     it "sends email to user" do
       ContactMailer.welcome_email(user).deliver
       ActionMailer::Base.deliveries.last.body.should =~ /#{user.username}/
