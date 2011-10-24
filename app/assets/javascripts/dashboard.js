@@ -21,7 +21,7 @@ $().ready(function(){
 
   setInterval(function() { $(".title").html($('form.edit_page #page_title').val() || "Edite seu título") }, 1000);
   setInterval(function() { $(".subtitle").html($('form.edit_page #page_subtitle').val() || "Edite seu subtítulo") }, 1000);
-  setInterval(function() { $(".description").html($('form.edit_page #page_description').val() || "Edite sua descrição") }, 1000);
+  setInterval(function() { $(".description").html($('form.edit_page #page_description').val().replace(/\n/g, "<br />") || "Edite sua descrição") }, 1000);
   setInterval(function() { sobre.layer("phone", "Edite seu telefone") }, 1000);
   setInterval(function() { sobre.layer("address", "Edite seu endereço") }, 1000);
   setInterval(function() { sobre.layer("email", "Edite seu email") }, 1000);

@@ -9,7 +9,7 @@
 %section.content
   %article
     .align-center
-      %p.description= resource.page.description
+      %p.description= resource.page.description.gsub("\n", "<br />").html_safe
 
   %aside.network
     .align-center
