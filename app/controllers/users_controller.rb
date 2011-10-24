@@ -10,6 +10,6 @@ class UsersController < InheritedResources::Base
   private
 
   def resource
-    @user = User.where(:username => params[:username]).first
+    @user = User.where(:username => /^#{params[:username]}$/i).first
   end
 end
