@@ -30,5 +30,11 @@
       %footer
         .align-center
           %p Sob.re | Todos os direitos reservados
-        = javascript_include_tag 'application'
-        = render 'shared/google_analytics.html.erb'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'jquery.password123'
+    = render 'shared/google_analytics.html.erb'
+        
+    :javascript
+      $(document).ready( function() {
+        $('input:password').password123();
+      });
