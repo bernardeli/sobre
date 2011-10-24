@@ -11,8 +11,8 @@ describe User do
     it { should validate_presence_of :username }
 
     it "should validate uniqueness of username" do
-      user_created = Factory(:user)
-      user = Factory.build(:user, :username => user_created.username)
+      user_created = Factory(:user, :username => 'jose')
+      user = Factory.build(:user, :username => user_created.username.upcase)
       user.valid?.should be_false
       user.errors.get(:username).should_not be_empty
     end
