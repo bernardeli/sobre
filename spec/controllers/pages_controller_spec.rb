@@ -7,7 +7,7 @@ describe PagesController do
   describe "PUT update" do
     it "render nothing" do
       put :update, :id => user.page.id
-      response.body.should be_blank
+      response.should redirect_to success_dashboard_index_path
     end
   end
 end

@@ -1,0 +1,52 @@
+= form_for current_user.page, :method => :put do |f|
+  %header.titulo
+    .align-center
+      %h2.title= resource.page.title
+      = f.text_field :title, :style => 'display:none'
+
+  %header.sub-titulo
+    .align-center
+      %h3.subtitle= resource.page.subtitle
+      = f.text_field :subtitle, :style => 'display:none'
+
+  %section.content
+    %article
+      .align-center
+        %p.description= resource.page.description.gsub("\n", "<br />").html_safe
+        = f.text_area :description, :style => 'display:none'
+
+    %aside.network
+      .align-center
+        %section.network
+          = link_to 'linkedin', '#', :class => 'linkedin'
+          = f.text_field :linkedin, :style => 'display:none'
+          = link_to 'orkut', '#', :class => 'orkut'
+          = f.text_field :orkut, :style => 'display:none'
+          = link_to 'facebook', '#', :class => 'facebook'
+          = f.text_field :facebook, :style => 'display:none'
+          = link_to 'twitter', '#', :class => 'twitter'
+          = f.text_field :twitter, :style => 'display:none'
+
+    %aside.address-content
+      .align-center
+        %section.address-content
+          %p.email-layer{:style => resource.page.email.blank? ? 'display:none' : ''}
+            %span.e-mail
+              Email:
+            %span.email-client
+              = mail_to(resource.page.email, nil, :class => 'email')
+            = f.text_field :email, :style => 'display:none'
+          %p.phone-layer{:style => resource.page.phone.blank? ? 'display:none' : ''}
+            %span.telephone
+              Telefone:
+            %span.email-client.phone
+              = resource.page.phone
+            = f.text_field :phone, :style => 'display:none'
+          %address.address-layer{:style => resource.page.address.blank? ? 'display:none' : ''}
+            %span.endereco
+              Endereço:
+            %span.endereco-client.address
+              = resource.page.address
+            = f.text_field :address, :style => 'display:none'
+
+  = f.submit 'enviar'

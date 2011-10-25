@@ -3,7 +3,7 @@ class Page
 
   field :title,       :type => String
   field :subtitle,    :type => String
-  field :description, :type => String
+  field :description, :type => String, :default => ''
   field :twitter,     :type => String
   field :facebook,    :type => String
   field :linkedin,    :type => String

@@ -4,7 +4,7 @@ class PagesController < InheritedResources::Base
 
   def update
     update! do |format|
-      format.html { render :nothing => true  }
+      format.html { redirect_to success_dashboard_index_path }
     end
   end
 
