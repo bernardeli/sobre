@@ -7,7 +7,7 @@
       if (e.keyCode == 27) { closeAllInputs() } // esc
     });
 
-    self.live('click', function() { 
+    self.click(function() { 
       closeAllInputs();
       options.value.toggle();
     });

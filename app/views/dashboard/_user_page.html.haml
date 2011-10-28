@@ -2,40 +2,30 @@
   %header.titulo
     .align-center
       %h2.title.editable-hover.tooltip{ :title => "Clique para editar" }= resource.page.title
-      .editable-box.title-input
-        %span.seta
-        %label Editar:
-        = f.text_field :title
-        %button.shiny-blue OK
+      = render 'field', :field => :title, :f => f
 
   %header.sub-titulo
     .align-center
       %h3.subtitle.editable-hover.tooltip{ :title => "Clique para editar" }= resource.page.subtitle
-      .editable-box.subtitle-input
-        = f.text_field :subtitle
+      = render 'field', :field => :subtitle, :f => f
 
   %section.content
     %article
       .align-center
         %p.description.editable-hover.tooltip{ :title => "Clique para editar" }= resource.page.description.gsub("\n", "<br />").html_safe
-        .editable-box.description-input
-        = f.text_area :description
+        = render 'field', :field => :description, :f => f, :type => :text_area
 
     %aside.network
       .align-center
         %section.network
           = link_to 'linkedin', 'javascript:void(0);', :class => 'linkedin editable-hover tooltip', :title => "Clique para editar"
-          .editable-box.linkedin-input
-            = f.text_field :linkedin
+          = render 'field', :field => :linkedin, :f => f
           = link_to 'orkut', 'javascript:void(0);', :class => 'orkut editable-hover tooltip', :title => "Clique para editar"
-          .editable-box.orkut-input
-            = f.text_field :orkut
+          = render 'field', :field => :orkut, :f => f
           = link_to 'facebook', 'javascript:void(0);', :class => 'facebook editable-hover tooltip', :title => "Clique para editar"
-          .editable-box.facebook-input
-            = f.text_field :facebook
+          = render 'field', :field => :facebook, :f => f
           = link_to 'twitter', 'javascript:void(0);', :class => 'twitter editable-hover tooltip', :title => "Clique para editar"
-          .editable-box.twitter-input
-            = f.text_field :twitter
+          = render 'field', :field => :twitter, :f => f
 
     %aside.address-content
       .align-center
@@ -45,21 +35,18 @@
               Email:
             %span.email-client.editable-hover.tooltip{ :title => "Clique para editar" }
               = mail_to(resource.page.email, nil, :class => 'email')
-            .editable-box.email-input{ :style => "display:none" }
-              = f.text_field :email
+            = render 'field', :field => :email, :f => f
           %p
             %span.telephone
               Telefone:
             %span.email-client.phone.editable-hover.tooltip{ :title => "Clique para editar" }
               = resource.page.phone
-            .editable-box.phone-input{ :style => "display:none" }
-              = f.text_field :phone
+            = render 'field', :field => :phone, :f => f
           %address
             %span.endereco
               Endereço:
             %span.endereco-client.address.editable-hover.tooltip{ :title => "Clique para editar" }
               = resource.page.address
-            .editable-box.address-input{ :style => "display:none" }
-              = f.text_field :address
+            = render 'field', :field => :address, :f => f
 
   %button.shiny-blue Publicar

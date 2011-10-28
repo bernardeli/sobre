@@ -1,0 +1,6 @@
+- type ||= :text_field
+.editable-box{:class => field.to_s + "-input"}
+  %span.seta
+  %label Editar:
+  = f.send(type, field)
+  %button.shiny-blue OK
