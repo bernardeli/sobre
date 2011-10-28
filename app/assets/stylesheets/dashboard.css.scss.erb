@@ -117,6 +117,24 @@ div.user-page-box{
   }
 }
 
+.choose-template{
+  background: #DDD;
+  border: 8px solid #959292;
+  color: #5D5C5C;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  right: -48px;
+  top: 200px;
+  
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -o-transform:rotate(-90deg);
+  /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+  -ms-transform:rotate(-90deg);
+}
+
 footer{
   background: #898989;
   color: #FFF;
@@ -139,12 +157,58 @@ footer{
   }
 }
 
+.editable-box{
+  background: #FFF;
+  border-top: 3px solid #B7002E;
+  color: #616161;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  padding: 0 40px 0 20px;
+  position:relative;
+  width: 500px;
+  z-index: 100;
+  span.seta{
+    background: url(seta-input-user-editable.png);
+    display: block;
+    height: 8px;
+    left: 16px;
+    position:absolute;
+    width: 10px;
+    top: -11px;
+  }
+  label{
+    float: left;
+    margin-right: 10px;
+  }
+  input{
+    border: 1px solid #D1D1D1;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: normal;
+    height: 15px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 75%;
+  }
+  .shiny-blue{
+    font-size: 13px !important;
+    height: 28px;
+    margin-top: 6px !important;
+    padding: 0;
+    width: 50px;
+  }
+}
+
 /* Easy Tooltip */
 #easyTooltip{
-  padding:5px 10px;
-  border:1px solid #195fa4;
-  background:#195fa4 url(bg.gif) repeat-x;
-  color:#fff;
+  background: url(tooltip.png) no-repeat;
+  color:#666;
+  height: 46px;
+  font-size: 14px;
+  padding-top: 13px;
+  width: 132px;
+  text-align: center;
 }
 /* Easy Tooltip */
 

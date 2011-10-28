@@ -8,6 +8,7 @@
 
   %body
     .all-content
+      // .choose-template Template
       .header-sobre
         .align-center
           = link_to image_tag("logo-dashboard.png"), "javascript:void(0);"
@@ -36,5 +37,8 @@
         = javascript_include_tag 'easyTooltip'
         :javascript
           $(document).ready(function(){	
-            $(".tooltip").easyTooltip();
+            $(".tooltip").easyTooltip({
+              xOffset: -66,
+              yOffset: 60
+            });
           });
