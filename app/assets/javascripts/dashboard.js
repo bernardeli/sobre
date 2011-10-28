@@ -7,52 +7,52 @@ $().ready(function(){
   $(".theme").change(sobre.addNewClass);
 
   $(".title").editable({
-    'target'  : $("form.edit_page #page_title"),
+    'value'   : $(".title-input"),
     'message' : 'Edite seu título'
   });
 
   $(".subtitle").editable({
-    'target'  : $("form.edit_page #page_subtitle"),
+    'value'  : $(".subtitle-input"),
     'message' : 'Edite seu subtítulo'
   });
 
   $(".description").editable({
-    'target'  : $("form.edit_page #page_description"),
+    'value'  : $(".description-input"),
     'message' : 'Edite sua descrição'
   });
 
   $(".phone").editable({
-    'target'       : $("form.edit_page #page_phone"),
+    'value'       : $(".phone-input"),
     'message'      : 'Edite seu telefone',
     'outerElement' : $('p.phone-layer')
   });
 
   $(".address").editable({
-    'target'       : $("form.edit_page #page_address"),
+    'value'       : $(".address-input"),
     'message'      : 'Edite seu endereço',
     'outerElement' : $('.address-layer')
   });
 
   $(".email").editable({
-    'target'       : $("form.edit_page #page_email"),
+    'value'       : $(".email-input"),
     'message'      : 'Edite seu endereço',
     'outerElement' : $('p.email-layer')
   });
 
   $(".twitter").editable({
-    'target'  : $("form.edit_page #page_twitter")
+    'value'  : $(".twitter-input")
   });
 
   $(".facebook").editable({
-    'target'  : $("form.edit_page #page_facebook")
+    'value'  : $(".facebook-input")
   });
 
   $(".linkedin").editable({
-    'target'  : $("form.edit_page #page_linkedin")
+    'value'  : $(".linkedin-input")
   });
 
   $(".orkut").editable({
-    'target'  : $("form.edit_page #page_orkut")
+    'value'  : $(".orkut-input")
   });
 });
 

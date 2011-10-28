@@ -2,22 +2,20 @@
   $.fn.editable = function(options) {
     var self = this;
     var message = options.message || "Click to edit";
-    var outerElement = options.outerElement || this;
 
     $(document).keyup(function(e) {
       if (e.keyCode == 27) { closeAllInputs() } // esc
     });
 
-    self.click(function() { 
+    self.live('click', function() { 
       closeAllInputs();
-      options.target.toggle();
+      options.value.toggle();
     });
 
-    outerElement.show();
-    setInterval(function() { self.html(options.target.val().replace(/\n/g, "<br />") || message) }, 1000);
+    setInterval(function() { self.html(options.value.find(':input').val().replace(/\n/g, "<br />") || message) }, 1000);
   }
 
   function closeAllInputs() {
-    $(':input[id*="page_"]').each(function(){ $(this).hide(); });
+    $('.editable-box').each(function(){ $(this).hide() });
   };
 })(jQuery);
