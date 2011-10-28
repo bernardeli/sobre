@@ -2,25 +2,39 @@
 %html{:lang => "pt-br"}
   %head
     %meta{:charset => "UTF-8"}
-    = stylesheet_link_tag "dashboard"
     = stylesheet_link_tag "themes"
+    = stylesheet_link_tag "dashboard"
     %title= "Sob.re - Dashboard de #{current_user.identifier}"
 
   %body
     .all-content
       .header-sobre
         .align-center
-          = link_to image_tag("logo-menor.png"), "javascript:void(0);"
+          = link_to image_tag("logo-dashboard.png"), "javascript:void(0);"
           .user-details
             = link_to 'Editar perfil', edit_user_registration_path
             |
             = link_to 'Sair', destroy_user_session_path, :method => :delete
           .user-page
-            = link_to users_show_url(current_user.username), users_show_url(current_user.username)
-      = yield
-
-    %footer
+            = link_to content_tag(:span, "http://sob.re/") + current_user.username, users_show_url(current_user.username)
+      
       .align-center
-        %p Sob.re | Todos os direitos reservados
-      = render 'shared/google_analytics.html.erb'
-      = yield :footer
+        %p.personalize
+          Personalize sua página
+          %span
+            Selecione um template e adicione as informações
+      
+      .user-page-box
+        .align-user-page
+          = yield
+
+      %footer
+        .align-center
+          %p Sob.re | Todos os direitos reservados
+        = render 'shared/google_analytics.html.erb'
+        = yield :footer
+        = javascript_include_tag 'easyTooltip'
+        :javascript
+          $(document).ready(function(){	
+            $(".tooltip").easyTooltip();
+          });

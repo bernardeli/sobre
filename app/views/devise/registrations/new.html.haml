@@ -14,15 +14,15 @@
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     = f.label :username
     = f.error_message_on :username
-    = f.text_field :username, :placeholder => "USUÁRIO"
+    = f.text_field :username, :class => "required"
 
     = f.label :email
     = f.error_message_on :email
-    = f.email_field :email, :placeholder => "E-MAIL"
+    = f.email_field :email, :placeholder => "E-MAIL", :class => "required"
 
     = f.label :password
     = f.error_message_on :password
-    = f.password_field :password, :placeholder => "SENHA"
+    = f.password_field :password, :placeholder => "SENHA", :class => "required"
 
     %button{ :class => "shiny-blue" }
       Cadastrar
@@ -31,18 +31,15 @@
   %li
     %h4 Cr.ie
     %p
-      Uma página para a sua<br />
-      empresa em poucos minutos.<br />
-      É rápido e fácil.
+      Uma página para a sua empresa<br />
+      em poucos minutos É rápido e fácil.
   %li
     %h4 Infor.me
     %p
-      Seu telefone, endereço<br />
-      e e-mail e seja facilmente<br />
-      encontrado por clientes.
+      Seu telefone, endereço e e-mail e<br />
+      seja facilmente encontrado por clientes.
   %li.no-right-margin
     %h4 Divulg.ue
     %p
-      Sua empresa na internet,<br />
-      obtenha novos contatos e<br />
-      oportunidades de negócio.
+      Sua empresa na internet, e garanta<br />
+      novas oportunidades de negócio.
