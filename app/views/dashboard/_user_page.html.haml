@@ -34,7 +34,7 @@
             %span.e-mail
               Email:
             %span.email-client.editable-hover.tooltip{ :title => "Clique para editar" }
-              = mail_to(resource.page.email, nil, :class => 'email')
+              = link_to(resource.page.email, "javascript:void(0)", :class => 'email')
             = render 'field', :field => :email, :f => f
           %p
             %span.telephone

@@ -151,10 +151,14 @@ footer{
     margin-right: -14px;
     margin-top: 25px;
   }
-  .editable-hover:hover{
-    border: 1px dashed #B7002E;
-    cursor: pointer;
+  .editable-hover{
+    position: relative;
+    &:hover{
+      border: 1px dashed #B7002E;
+      cursor: pointer;
+    }
   }
+
 }
 
 .editable-box{
@@ -163,13 +167,13 @@ footer{
   color: #616161;
   height: 40px;
   line-height: 40px;
-  margin-top: 20px;
+  margin-top: 1px;
   padding: 0 40px 0 20px;
-  position:relative;
+  position: absolute;
   width: 500px;
   z-index: 100;
   span.seta{
-    background: url(seta-input-user-editable.png);
+    background: url(<%= asset_path('seta-input-user-editable.png') %>);
     display: block;
     height: 8px;
     left: 16px;
@@ -179,6 +183,7 @@ footer{
   }
   label{
     float: left;
+    font-size: 16px;
     margin-right: 10px;
   }
   input{
@@ -200,9 +205,75 @@ footer{
   }
 }
 
+.sub-titulo .editable-box{
+  input{
+    display: block;
+    margin-top: 7px;
+  }
+  button{margin-top: -38px !important;}
+}
+
+.twitter-input, .facebook-input, .orkut-input, .linkedin-input, .address-input, .phone-input, .email-input{
+  margin-left: -330px;
+  margin-top: 90px;
+  width: 350px;
+  span.seta{
+    left: 91%;
+  }
+  input{
+    display: block;
+    float: left;
+    margin-top: 7px;
+    width: 61%;
+  }
+}
+
+.facebook-input{margin-left: -235px;}
+.orkut-input{margin-left: -145px;}
+.linkedin-input{margin-left: -58px;}
+
+.description-input{
+  border-left: 3px solid #B7002E;
+  border-top: 0 none;
+  height: 282px;
+  margin-left: 585px;
+  padding-right: 0;
+  width: 320px;
+  span.seta{
+    background: url(<%= asset_path('seta-input-user-editable-left.png') %>);
+    height: 10px;
+    left: -11px;
+    width: 8px;
+    top: 11px;
+  }
+  label{
+    display: block;
+    float: none;
+  }
+  textarea{
+    display: block;
+    height: 200px;
+    width: 300px;
+  }
+  button.shiny-blue{
+    float: none;
+    margin-left: 253px;
+  }
+}
+
+
+.address-input, .phone-input, .email-input{
+  margin-top: 3px;
+  width: 400px;
+  input{
+    width: 70%;
+  }
+}
+
+
 /* Easy Tooltip */
 #easyTooltip{
-  background: url(tooltip.png) no-repeat;
+  background: url(<%= asset_path('tooltip.png') %>) no-repeat;
   color:#666;
   height: 46px;
   font-size: 14px;
