@@ -6,6 +6,10 @@ test:
   host: localhost
   database: mongo_test
 
+production:
+  host: localhost
+  database: mongo_prod
+
 # set these environment variables on your prod server
 #production:
 #  host: <%= ENV['MONGOID_HOST'] %>

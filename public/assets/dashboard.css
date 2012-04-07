@@ -1,0 +1,340 @@
+/* line 2, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+body {
+  font-family: Tahoma;
+}
+
+/* line 7, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+button.shiny-blue {
+  background-color: #759ae9;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#759ae9 0%), to(#376fe0 50%));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: -moz-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: -ms-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: -o-linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  background-image: linear-gradient(top, #759ae9 0%, #376fe0 50%, #1a5ad9 50%, #2463de 100%);
+  border-top: 1px solid #1f58cc;
+  border-right: 1px solid #1b4db3;
+  border-bottom: 1px solid #174299;
+  border-left: 1px solid #1b4db3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+  -ms-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+  -o-box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+  box-shadow: inset 0 0 2px 0 rgba(57, 140, 255, 0.8);
+  color: #fff;
+  font: bold 12px "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0;
+  text-shadow: 0 -1px 1px #1a5ad9;
+  width: 150px;
+}
+
+/* line 35, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+button.shiny-blue:hover {
+  background-color: #5d89e8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5d89e8 0%), to(#2261e0 50%));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: -moz-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: -ms-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: -o-linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  background-image: linear-gradient(top, #5d89e8 0%, #2261e0 50%, #044bd9 50%, #0d53de 100%);
+  cursor: pointer;
+}
+
+/* line 45, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+button.shiny-blue:active {
+  border-top: 1px solid #1b4db3;
+  border-right: 1px solid #174299;
+  border-bottom: 1px solid #133780;
+  border-left: 1px solid #174299;
+  -webkit-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+  -moz-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+  -ms-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+  -o-box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+  box-shadow: inset 0 0 5px 2px #1a47a0, 0 1px 0 #eeeeee;
+}
+
+/* line 57, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre {
+  background: #DDD;
+  border-top: 10px solid #B7002E;
+  border-bottom: 2px solid #C2C6CB;
+  overflow: hidden;
+}
+/* line 62, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre img {
+  margin: 5px 0;
+  float: left;
+}
+/* line 66, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre .user-details {
+  color: #333;
+  float: right;
+  font-size: 13px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+/* line 72, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre .user-details a {
+  color: #346FD7;
+  font-size: 13px;
+}
+/* line 75, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre .user-details a:hover {
+  text-decoration: none;
+}
+/* line 80, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre .user-page {
+  clear: right;
+  float: right;
+}
+/* line 83, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre .user-page a {
+  color: #595A5D;
+  font-size: 20px;
+  text-decoration: none;
+}
+/* line 87, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre .user-page a:hover {
+  text-decoration: underline;
+}
+/* line 91, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.header-sobre .user-page span {
+  color: #9F9E9E;
+}
+
+/* line 97, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+p.personalize {
+  color: #B7002E;
+  font-size: 24px;
+  margin: 20px 0;
+}
+/* line 101, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+p.personalize span {
+  color: #9F9E9E;
+  display: block;
+  font-size: 16px;
+}
+
+/* line 108, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+div.user-page-box {
+  padding-bottom: 100px;
+}
+/* line 110, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+div.user-page-box .align-user-page {
+  border: 13px solid #3E4043;
+  margin: 0 auto;
+  width: 960px;
+}
+/* line 114, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+div.user-page-box .align-user-page .align-center {
+  width: 930px;
+}
+
+/* line 120, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.choose-template {
+  background: #DDD;
+  border: 8px solid #959292;
+  color: #5D5C5C;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  right: -48px;
+  top: 200px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  /* filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); */
+  -ms-transform: rotate(-90deg);
+}
+
+/* line 138, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+footer {
+  background: #898989;
+  color: #FFF;
+  font-size: 12px;
+  line-height: 27px;
+  text-align: center;
+}
+
+/* line 146, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.edit_page {
+  position: relative;
+}
+/* line 148, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.edit_page button.shiny-blue {
+  float: right;
+  font-size: 16px;
+  margin-right: -14px;
+  margin-top: 25px;
+}
+/* line 154, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.edit_page .editable-hover {
+  position: relative;
+}
+/* line 156, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.edit_page .editable-hover:hover {
+  border: 1px dashed #B7002E;
+  cursor: pointer;
+}
+
+/* line 164, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.editable-box {
+  background: #FFF;
+  border-top: 3px solid #B7002E;
+  color: #616161;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 1px;
+  padding: 0 40px 0 20px;
+  position: absolute;
+  width: 500px;
+  z-index: 100;
+}
+/* line 175, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.editable-box span.seta {
+  background: url(/assets/seta-input-user-editable.png);
+  display: block;
+  height: 8px;
+  left: 16px;
+  position: absolute;
+  width: 10px;
+  top: -11px;
+}
+/* line 184, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.editable-box label {
+  float: left;
+  font-size: 16px;
+  margin-right: 10px;
+}
+/* line 189, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.editable-box input {
+  border: 1px solid #D1D1D1;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: normal;
+  height: 15px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 75%;
+}
+/* line 199, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.editable-box .shiny-blue {
+  font-size: 13px !important;
+  height: 28px;
+  margin-top: 6px !important;
+  padding: 0;
+  width: 50px;
+}
+
+/* line 209, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.sub-titulo .editable-box input {
+  display: block;
+  margin-top: 7px;
+}
+/* line 213, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.sub-titulo .editable-box button {
+  margin-top: -38px !important;
+}
+
+/* line 216, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.twitter-input, .facebook-input, .orkut-input, .linkedin-input, .address-input, .phone-input, .email-input {
+  margin-left: -330px;
+  margin-top: 90px;
+  width: 350px;
+}
+/* line 220, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.twitter-input span.seta, .facebook-input span.seta, .orkut-input span.seta, .linkedin-input span.seta, .address-input span.seta, .phone-input span.seta, .email-input span.seta {
+  left: 91%;
+}
+/* line 223, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.twitter-input input, .facebook-input input, .orkut-input input, .linkedin-input input, .address-input input, .phone-input input, .email-input input {
+  display: block;
+  float: left;
+  margin-top: 7px;
+  width: 61%;
+}
+
+/* line 231, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.facebook-input {
+  margin-left: -235px;
+}
+
+/* line 232, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.orkut-input {
+  margin-left: -145px;
+}
+
+/* line 233, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.linkedin-input {
+  margin-left: -58px;
+}
+
+/* line 235, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.description-input {
+  border-left: 3px solid #B7002E;
+  border-top: 0 none;
+  height: 282px;
+  margin-left: 585px;
+  padding-right: 0;
+  width: 320px;
+}
+/* line 242, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.description-input span.seta {
+  background: url(/assets/seta-input-user-editable-left.png);
+  height: 10px;
+  left: -11px;
+  width: 8px;
+  top: 11px;
+}
+/* line 249, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.description-input label {
+  display: block;
+  float: none;
+}
+/* line 253, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.description-input textarea {
+  display: block;
+  height: 200px;
+  width: 300px;
+}
+/* line 258, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.description-input button.shiny-blue {
+  float: none;
+  margin-left: 253px;
+}
+
+/* line 265, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.address-input, .phone-input, .email-input {
+  margin-top: 3px;
+  width: 400px;
+}
+/* line 268, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.address-input input, .phone-input input, .email-input input {
+  width: 70%;
+}
+
+/* Easy Tooltip */
+/* line 275, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+#easyTooltip {
+  background: url(/assets/tooltip.png) no-repeat;
+  color: #666;
+  height: 46px;
+  font-size: 14px;
+  padding-top: 13px;
+  width: 132px;
+  text-align: center;
+}
+
+/* Easy Tooltip */
+/* line 286, /Users/ric/workspace/sobre/app/assets/stylesheets/dashboard.css.scss.erb */
+.editable-box {
+  display: none;
+}

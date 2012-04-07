@@ -1,0 +1,346 @@
+@charset "UTF-8";/*
+*/
+
+/* line 1, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 {
+  font-family: Tahoma;
+}
+/* line 4, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 .all-content {
+  background: #E9E9E7;
+}
+/* line 8, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 header.titulo {
+  background: url(/assets/theme-01/header-background-eebee120880b8801e5d6fe4fdbaeaabf.png) repeat-x;
+  height: 155px;
+}
+/* line 12, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 header.titulo h2 {
+  color: #6B9DB8;
+  font-size: 65px;
+}
+/* line 17, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 header.sub-titulo {
+  color: #464646;
+  font-size: 35px;
+  margin: -65px 0 30px 0;
+}
+/* line 23, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 section.content {
+  background: url(/assets/theme-01/content-background-e16c52c03b33a032a3c94553538e0653.png) repeat-x;
+  height: 235px;
+  padding-top: 15px;
+}
+/* line 29, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 article p.description {
+  color: #FFF;
+  float: left;
+  height: 195px;
+  overflow: hidden;
+  width: 570px;
+}
+/* line 37, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 aside section {
+  float: right;
+  margin: 30px 0 0 0;
+}
+/* line 42, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 section.address-content {
+  color: #FFF;
+  margin-top: 20px;
+  width: 340px;
+}
+/* line 51, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 section.address-content span.e-mail,
+.theme-01 section.address-content span.telephone,
+.theme-01 section.address-content span.endereco {
+  font-weight: bold;
+}
+/* line 55, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 .email {
+  color: white;
+}
+/* line 57, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/01.css.scss.erb */
+.theme-01 footer p {
+  color: #464646;
+  font-size: 14px;
+  text-align: center;
+}
+/* line 1, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 {
+  background: #cacaca url(/assets/theme-02/body-background-filete-630c8938f5b2a04f7b64961f5924c32a.png) center top repeat-x;
+  font-family: Tahoma;
+}
+/* line 5, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 .align-center {
+  width: 760px;
+}
+/* line 9, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 .all-content {
+  background: url(/assets/theme-02/body-background-8bcb0e2a7ae2c4a0886683062a443b22.png) center top no-repeat;
+}
+/* line 12, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 header.titulo .align-center {
+  width: 800px;
+}
+/* line 16, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 header.titulo h2 {
+  color: #870000;
+  font-size: 36px;
+  padding-top: 40px;
+}
+/* line 22, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 header.sub-titulo h3 {
+  color: #FFF;
+  font-size: 22px;
+  margin-top: 10px;
+}
+/* line 28, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 article {
+  color: #FFF;
+}
+/* line 32, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 .content {
+  min-height: 340px;
+}
+/* line 36, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 p.description {
+  margin-top: 10px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 42, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 aside.address span.email {
+  display: none;
+}
+/* line 43, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 aside.address span.email-client {
+  color: #B1B1B1;
+  display: block;
+  font-size: 30px;
+}
+/* line 49, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 section.network {
+  margin: 135px auto 0 auto;
+  width: 400px;
+}
+/* line 54, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 section.network h4 {
+  color: #4A4A4A;
+  font-size: 14px;
+  margin-left: 495px;
+  position: absolute;
+  top: 30px;
+}
+/* line 62, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 section.address {
+  float: left;
+  margin-left: 57px;
+  margin-top: -180px;
+  width: 657px;
+  text-align: center;
+}
+/* line 70, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 section.address .telephone {
+  display: none;
+}
+/* line 74, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 section.address .telephone-client {
+  color: #252525;
+  font-size: 30px;
+  margin-left: 193px;
+  position: absolute;
+  top: 45px;
+}
+/* line 82, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 section.address address {
+  display: none;
+}
+/* line 86, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/02.css.scss.erb */
+.theme-02 footer p {
+  color: #464646;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* line 1, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 14, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header,
+hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* This helps to make newer HTML5 elements behave like DIVs in older browers */
+/* line 25, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+article, aside, details, figcaption, figure, dialog,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Line-height should always be unitless! */
+/* line 30, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+body {
+  line-height: 1.5;
+  background: white;
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+/* line 36, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* float:none prevents the span-x classes from breaking table-cell display */
+/* line 41, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  float: none !important;
+}
+
+/* line 46, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+table, th, td {
+  vertical-align: middle;
+}
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+/* line 51, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+}
+
+/* line 52, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* Remove annoying border on linked images. */
+/* line 55, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+a img {
+  border: none;
+}
+
+/* Remember to define your own focus styles! */
+/* line 58, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+:focus {
+  outline: 0;
+}
+
+/* line 60, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 61, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+html[xmlns] .clearfix {
+  display: block;
+}
+
+/* line 62, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+* html .clearfix {
+  height: 1%;
+}
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Condensed"), local("UbuntuCondensed-Regular"), url("http://themes.googleusercontent.com/static/fonts/ubuntucondensed/v1/DBCt-NXN57MTAFjitYxdrNxB8OB85xaNTJvVSB9YUjQ.woff") format("woff");
+}
+
+/** Rodapé sempre embaixo **/
+/* line 73, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* line 78, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+.all-content {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 82, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+.content {
+  padding-bottom: 60px;
+  /* Mesma Altura do Rodapé */
+}
+
+/* line 85, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 27px;
+  /* Mesma Altura do Rodapé */
+}
+
+/* line 92, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+.align-center {
+  margin: 0 auto;
+  width: 980px;
+}
+
+/* line 98, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+section.network h4 {
+  color: #FFF;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+/* line 105, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+section.network a {
+  display: block;
+  float: right;
+  height: 78px;
+  margin-left: 10px;
+  width: 79px;
+  text-indent: -5555em;
+}
+
+/* line 114, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+section.network a.twitter {
+  background: url(/assets/theme-01/twitter-3aeb325186a26cd86a2d08afb8a6c66e.png);
+}
+
+/* line 115, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+section.network a.facebook {
+  background: url(/assets/theme-01/facebook-6a2aae66f9278bc8fcbfc3531dbb0b44.png);
+}
+
+/* line 116, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+section.network a.orkut {
+  background: url(/assets/theme-01/orkut-88a0668743a3cac41af43bc399c5c823.png);
+}
+
+/* line 117, /Users/ric/workspace/sobre/app/assets/stylesheets/themes/base.css.scss.erb */
+section.network a.linkedin {
+  background: url(/assets/theme-01/linkedin-7c7f8db39199eb10f682fbf9ce8f484f.png);
+}
