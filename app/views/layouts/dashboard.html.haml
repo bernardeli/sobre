@@ -18,13 +18,13 @@
             = link_to 'Sair', destroy_user_session_path, :method => :delete
           .user-page
             = link_to content_tag(:span, "http://sob.re/") + current_user.username, users_show_url(current_user.username)
-      
+
       .align-center
         %p.personalize
           Personalize sua página
           %span
             Selecione um template e adicione as informações
-      
+
       .user-page-box
         .align-user-page
           = yield
@@ -34,11 +34,3 @@
           %p Sob.re | Todos os direitos reservados
         = render 'shared/google_analytics.html.erb'
         = yield :footer
-        = javascript_include_tag 'easyTooltip'
-        :javascript
-          $(document).ready(function(){	
-            $(".tooltip").easyTooltip({
-              xOffset: -66,
-              yOffset: 60
-            });
-          });

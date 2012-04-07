@@ -31,10 +31,4 @@
         .align-center
           %p Sob.re | Todos os direitos reservados
         = javascript_include_tag 'application'
-        = javascript_include_tag 'jquery.validate.min'
-        :javascript
-          $(document).ready(function(){
-            $("#user_new").validate();
-            $(".contact-page form").validate();
-          });
         = render 'shared/google_analytics.html.erb'

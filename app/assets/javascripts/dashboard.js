@@ -1,10 +1,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require easyTooltip
 //= require editable
-//= require_tree .
 
 $().ready(function(){
+  $(".tooltip").easyTooltip({
+    xOffset: -66,
+    yOffset: 60
+  });
+
   $(".theme").change(sobre.addNewClass);
 
   $(".title").editable({
