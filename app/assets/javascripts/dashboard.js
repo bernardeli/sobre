@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require editable
+//= require_tree .
 
 $().ready(function(){
   $(".theme").change(sobre.addNewClass);

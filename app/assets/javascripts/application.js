@@ -1,5 +1,6 @@
 //= require jquery
 //= require jquery_ujs
+//= require_tree .
 
 $().ready(function(){
   $('.login-link').click(function(){

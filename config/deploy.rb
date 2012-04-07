@@ -1,5 +1,4 @@
 require 'bundler/capistrano'
-load 'deploy/assets'
 
 set :application, "sobre"
 set :user, "deploy"
@@ -44,4 +43,3 @@ namespace :deploy do
 end
 
 after "deploy:update_code", "deploy:symlink_config"
-after "deploy:symlink_config", "deploy:precompile"
