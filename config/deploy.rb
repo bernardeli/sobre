@@ -18,7 +18,7 @@ set :default_environment, {
 }
 
 set :scm, :git
-set :repository, "git@github.com:bernardelli/sobre.git"
+set :repository, "git@github.com:bernardeli/sobre.git"
 set :deploy_via, :remote_cache
 
 role :web, domain
