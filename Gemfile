@@ -20,14 +20,16 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'growl_notify'
+  gem 'active_reload'
+  gem 'thin'
 end
 
 group :test, :development do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'debugger'
 end
 
 group :test do
-  gem 'rspec-rails', '~> 2.6'
+  gem 'rspec-rails', '~> 2.9'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'capybara'
